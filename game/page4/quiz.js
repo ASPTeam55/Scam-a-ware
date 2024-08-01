@@ -1,46 +1,64 @@
+import { bots } from '../page2/bot.js'; // Adjust path as needed
+
 document.addEventListener('DOMContentLoaded', () => {
     const quizTitle = document.getElementById('quiz-title');
     const quizContainer = document.getElementById('quiz-container');
     const scoreElement = document.getElementById('score');
+    const botImage = document.getElementById('botImage');
     const username = sessionStorage.getItem('username');
 
+    // Redirect to index page if no username is found
     if (!username) {
-        window.location.href = 'index.html';
+        window.location.href = '../index.html';
+        return;
+    }
+
+    // Retrieve the selected bot from sessionStorage
+    const selectedBot = sessionStorage.getItem('selectedBot');
+    console.log(`Retrieved selected bot from sessionStorage: ${selectedBot}`);
+
+    // Update the bot image based on the selected bot
+    const selectedBotData = bots.find(bot => bot.name === selectedBot);
+    if (selectedBotData) {
+        botImage.src = selectedBotData.image;
+        botImage.alt = `Bot ${selectedBotData.name}`;
+    } else {
+        console.error('Unrecognized bot selection:', selectedBot);
+        botImage.style.display = 'none'; // Hide the bot image if the selection is invalid
     }
 
     // Mock quiz data with images, true/false options, and explanations
     const quiz = {
         title: 'Sample Quiz',
         questions: [
-            { 
-                question: 'Is this a scam?', 
-                options: ['True', 'False'], 
+            {
+                question: 'Is this a scam?',
+                options: ['True', 'False'],
                 answer: 'True',
-                image: 'assets/qn1.png',  // Path to the image for this question
-                explanation: 'This is a scam because it involves deceptive practices meant to defraud the user.'  // Explanation for the answer
+                image: '../assets/qn1.png',
+                explanation: 'This is a scam because it involves deceptive practices meant to defraud the user.'
             },
-            { 
-                question: 'Is this phishing?', 
-                options: ['True', 'False'], 
+            {
+                question: 'Is this phishing?',
+                options: ['True', 'False'],
                 answer: 'True',
-                image: 'assets/qn2.jpg',  // Path to the image for this question
-                explanation: 'This is phishing because it does involve fraudulent attempts to obtain sensitive information.'  // Explanation for the answer
+                image: '../assets/qn2.jpg',
+                explanation: 'This is phishing because it involves fraudulent attempts to obtain sensitive information.'
             }
         ]
     };
 
     let currentQuestionIndex = 0;
     const totalQuestions = quiz.questions.length;
-    let score = 0;  // Initialize score
+    let score = 0;
 
     // Load a specific question
     const loadQuestion = (index) => {
-        // Clear previous content
-        quizContainer.innerHTML = '';
+        quizContainer.innerHTML = ''; // Clear previous content
 
         if (index >= 0 && index < totalQuestions) {
             const q = quiz.questions[index];
-            
+
             const questionElement = document.createElement('div');
             questionElement.classList.add('question');
 
@@ -54,11 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
             questionImage.alt = 'Question Image';
             questionElement.appendChild(questionImage);
 
-            // Add text prompt
-            const promptText = document.createElement('p');
-            promptText.textContent = 'Is this a scam?'; 
-            questionElement.appendChild(promptText);
-
+            // Add options
             q.options.forEach(option => {
                 const optionLabel = document.createElement('label');
                 optionLabel.textContent = option;
@@ -93,17 +107,17 @@ document.addEventListener('DOMContentLoaded', () => {
         if (selectedOption === correctAnswer) {
             feedback.textContent = 'Correct!';
             feedback.classList.add('feedback-correct');
-            score++;  // Increase score for correct answer
+            score++;
         } else {
             feedback.textContent = `Incorrect! The correct answer was ${correctAnswer}. ${explanation}`;
             feedback.classList.add('feedback-incorrect');
         }
 
         // Update the score display
-        scoreElement.textContent = score;
+        scoreElement.textContent = score; // Remove 'Score: ' prefix
 
         quizContainer.appendChild(feedback);
-        
+
         // Load the next question after providing feedback
         setTimeout(() => {
             nextQuestion();
@@ -117,6 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
             loadQuestion(currentQuestionIndex);
         } else {
             alert(`You have reached the end of the quiz. Your final score is ${score}.`);
+            // Optionally, redirect to another page or reset the quiz
         }
     };
 
