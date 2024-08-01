@@ -1,0 +1,210 @@
+/* Apply the moving gradient animation to the body */
+body {
+  background: linear-gradient(45deg, #00ff00, #ff00ff, #00ffff, #ff0000);
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
+  color: white;
+  font-family: 'Press Start 2P', cursive; /* Ensure retro font is used */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Keyframes for the gradient animation */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+/* Center the content inside the container */
+/* Style the container */
+.container {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for the content */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Style the game title */
+h1 {
+  font-size: 4em; /* Larger font size for the retro title */
+  color: #ff00ff; /* Neon pink color for the title */
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 0 #000; /* Shadow effect for better readability */
+}
+
+/* Set the width of the logo image */
+.logo img {
+  width: 30%; /* Larger logo for better visibility */
+}
+
+/* Style the quiz container */
+/* Style the quiz container */
+#quiz-container {
+  margin: 10px auto; /* Center the container horizontally and add vertical margin */
+  background-color: rgba(0, 0, 0, 0.8); /* Slightly darker background for the quiz */
+  padding: 10px; /* Reduced padding for a smaller container */
+  border-radius: 8px; /* Slightly smaller border radius */
+  box-shadow: 0px 0px 8px rgba(0, 255, 0, 0.7); /* Reduced shadow size */
+  width: 90%; /* Set a width for centering */
+  max-width: 600px; /* Optional: Set a max width to control the container size */
+}
+
+/* Style quiz question images */
+.question img {
+  display: block;
+  margin: 10px auto; /* Center the image and add margin */
+  max-width: 40%; /* Make images smaller */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Rounded corners for a retro look */
+}
+
+/* Add some margin to the form container */
+.form-container {
+  margin-top: 20px; /* Adjusted margin for better spacing */
+}
+
+/* Align the input group items */
+.input-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style the input field */
+input[type="text"] {
+  background-color: #000;
+  border: 2px solid #00ff00;
+  color: #A9A9A9;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px rgba(0, 255, 0, 0.7);
+  font-family: 'Press Start 2P', cursive; /* Retro pixelated font */
+}
+
+/* Style the buttons */
+button {
+  background-color: #ff00ff;
+  border: 2px solid #00ff00;
+  color: #00ff00;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+  font-family: 'Press Start 2P', cursive; /* Retro pixelated font */
+  font-size: 1.2em; /* Larger font size for buttons */
+}
+
+/* Change button color on hover */
+button:hover {
+  background-color: #00ff00;
+  color: #000;
+}
+
+/* Style the paragraph text */
+p {
+  font-family: 'Press Start 2P', cursive; /* Retro pixelated font */
+  font-size: 1.2em; /* Slightly larger font size */
+  color: #ffffff; 
+  margin: 20px 0; /* Add margin for spacing */
+}
+
+/* Style the quiz title */
+#quiz-title {
+  margin-top: 20px;
+  color: #ff00ff; /* Neon pink color for quiz title */
+}
+
+/* Style the footer text */
+.footer-text {
+  font-family: 'Press Start 2P', cursive; /* Retro pixelated font */
+  font-size: 1em; /* Adjust font size for the footer */
+  color: #ff00ff; /* Neon pink color for consistency */
+  margin-top: 20px; /* Spacing above the footer text */
+}
+
+/* Bot NPC container */
+.bot-npc {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Bot NPC image */
+.bot-image {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+}
+
+/* Chat box for the welcome message */
+.chat-box {
+  background-color: #000000; /* Black background for the chat box */
+  border: 2px solid #00ff00; /* White border */
+  border-radius: 10px;
+  padding: 10px;
+  max-width: 300px;
+}
+
+/* Welcome message */
+#welcomeMessage {
+  font-family: 'Press Start 2P', cursive; /* Retro pixelated font */
+  font-size: 1em; /* Adjust font size for the footer */
+  color: #A9A9A9; 
+}
+
+/* Container for quiz questions */
+.question {
+  margin-bottom: 20px;
+}
+
+/* Style for images in questions */
+.question img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* Style for feedback messages */
+.feedback {
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.feedback-correct {
+  color: #00ff00; /* Green for correct answers */
+}
+
+.feedback-incorrect {
+  color: #ff0000; /* Red for incorrect answers */
+}
+
+/* Navigation buttons */
+.navigation {
+  margin-top: 20px;
+}
+
+.nav-button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+/* Add this to your existing styles.css */
+#score-container {
+  display: flex;
+  align-items: center;
+}
+
+#bot-image {
+  width: 100px; /* Adjust size as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Space between image and score */
+}
+
+/* Optional: Additional styles for the bot image */
+#bot-image {
+  border-radius: 50%; /* Optional: rounded corners for a circular appearance */
+}
