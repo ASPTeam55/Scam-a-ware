@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ending</title>
+</head>
+<body>
+    <h2>Answer correct: <%= correct_count %>/<%= total_count %></h2>
+    <% if(correct_count / total_count > 0.5){ %>
+        <h1>Congradulations!!!</h1>
+    <% } else{ %>
+        <h1>Try again...</h1>
+    <% } %>
+</body>
+</html>
