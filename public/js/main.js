@@ -10,20 +10,11 @@ for(const sentence of sentences){
     });
 }
 
-function checkBtnClicked(){
-    const sentences_hilighted = [...document.getElementsByClassName("hilighted")];
-    const path = "/checkAns";
-    
-    fetch(
-        path,
-        {
-            method: "POST",
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({selected_sentences: sentences_hilighted})
-        }
-    ).then(response => {
-        if (response.redirected) {
-            window.location.href = response.url;
-        }
-    }).catch(error => console.error("Error:", error));
+const hidden_form = document.getElementById("hidden_form");
+for(const sentence of sentences){
+    const index = sentence.dataset.index;
+    const checkbox = document.getElementById(`sentence-${index}`);
+    sentence.addEventListener("click", () => {
+        checkbox.checked = !checkbox.checked;
+    });
 }

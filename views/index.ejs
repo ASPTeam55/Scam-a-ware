@@ -1,27 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Text select</title>
-    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css" />
     <script src="/js/main.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Text Select</h1>
 
     <p><b>Sender email: </b><%= question.sender_email %></p>
     <p><b>Recipient email: </b><%= question.recipient_email %></p>
     <p><b>Subject: </b><%= question.subject %></p>
     <p>
-        <b>Content: </b> <br>
-        <% question.content.forEach(sentence => { %>
-            <span class="oneSentence"><%= sentence %>.</span>
-        <% }) %>
+      <b>Content: </b> <br />
+      <% for(let i = 0; i < question.content.length; ++i){ %>
+      <span class="oneSentence" data-index="<%= i %>"><%= question.content[i] %>.</span>
+      <% } %>
     </p>
-    <a href="#"><%= question.link %></a>
-    <br>
-    <button type="button" onclick="checkBtnClicked()">Check answer</button>
 
-</body>
+    <!-- hidden form -->
+    <form id="hidden_form">
+        <% for(let i = 0; i < question.content.length; ++i){ %>
+            <input type="checkbox" id="sentence-<%= i %>" name="sentences" value="<%= question.content[i] %>">
+            <label for="sentence-<%= i %>"><%= question.content[i] %></label><br>
+        <% } %>
+    </form>
+
+    <a href="#"><%= question.link %></a>
+    <br />
+    <a href="/checkAns">Check Answer</a>
+  </body>
 </html>
