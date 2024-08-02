@@ -4,7 +4,7 @@
       "sender_email": "sender1@gmail.com",
       "recipient_email": "recipient1@gmail.com",
       "subject": "For test",
-      "content": "This is a scam. When a user sets a password, the system doesn't store the actual password. Instead, it stores a hash of the password. When the user attempts to log in, the system hashes the entered password and compares it with the stored hash. If the hashes match, the user is authenticated. This ensures that even if the password database is compromised, the actual passwords remain secure.",
+      "content": "This is a scam. When a user sets a password, the system doesn't store the actual password. Instead, it stores a hash of the password. When the user attempts to log in, the system hashes the entered password and compares it with the stored hash. If the hashes match, the user is authenticated. This ensures that even if the password database is compromised, the actual passwords remain secure. ",
       "link": "localhost:3000",
       "answers": [
         "This is a scam"
@@ -14,11 +14,11 @@
       "sender_email": "sender2@gmail.com",
       "recipient_email": "recipient2@gmail.com",
       "subject": "Security Check",
-      "content": "You should never share your authentication token. When a user accesses a secure system, an authentication token is generated and provided to the user. This token is used for subsequent requests to verify the user's identity. Sharing the token with others can compromise the security of your account. Always keep your authentication token confidential and never share it with anyone.",
+      "content": "You should share your authentication token. When a user accesses a secure system, an authentication token is generated and provided to the user. This token is used for subsequent requests to verify the user's identity. Sharing the token with others can compromise the security of your account. Always don't keep your authentication token confidential and never share it with anyone. ",
       "link": "localhost:3001",
       "answers": [
-        "Always keep your authentication token confidential",
-        "Never share your authentication token with anyone"
+        "Always don't keep your authentication token confidential and never share it with anyone",
+        "You should share your authentication token"
       ]
     }
   ]

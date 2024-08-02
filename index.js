@@ -20,6 +20,7 @@ global.answer_correct_count = 0;
 app.get("/", (req, res) => {
     let question = {...global.question_data[global.question_index]};
     question.content = question["content"].split(". ");
+    question.content.splice(question.content.length - 1, 1);
 
     res.render(
         "index.ejs",
