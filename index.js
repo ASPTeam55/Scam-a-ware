@@ -20,7 +20,7 @@ global.answer_correct_count = 0;
 app.get("/", (req, res) => {
     let question = {...global.question_data[global.question_index]};
     question.content = question["content"].split(". ");
-    
+
     res.render(
         "index.ejs",
         {question: question}
@@ -28,7 +28,37 @@ app.get("/", (req, res) => {
 });
 
 app.post("/checkAns", (req, res) => {
+    let sentences_hilighted = req.body.sentences;
+    // Ensure sentences_hilighted is always an array
+    if (!Array.isArray(sentences_hilighted)) {
+        sentences_hilighted = [sentences_hilighted];
+    }
+    const HILIGHT_COUNT = sentences_hilighted.length;
+    const CORRECT_ANS_COUNT = global.question_data[global.question_index]["answers"].length;
+    const HILIGHT_COUNT_CORRECT = (HILIGHT_COUNT == CORRECT_ANS_COUNT);
     
+    if(HILIGHT_COUNT_CORRECT){
+        const corret_answers = global.question_data[global.question_index]["answers"];
+        const ANSWER_CORRECT = sentences_hilighted.every(sentence => {
+                                    return corret_answers.includes(sentence);
+                               });
+        
+        if(ANSWER_CORRECT){
+            global.answer_correct_count++;
+        }
+    }
+    global.question_index++;
+
+    const total_quesion_count = global.question_data.length;
+    if(global.question_index >= total_quesion_count){
+        res.render(
+            "ending.ejs",
+            {correct_count: global.answer_correct_count, total_count: total_quesion_count}
+        );
+    }
+    else{
+        res.redirect("/");
+    }
 });
 
 app.listen(PORT, () => {

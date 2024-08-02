@@ -21,15 +21,15 @@
     </p>
 
     <!-- hidden form -->
-    <form id="hidden_form">
+    <form id="hidden_form" action="/checkAns" method="post">
         <% for(let i = 0; i < question.content.length; ++i){ %>
-            <input type="checkbox" id="sentence-<%= i %>" name="sentences" value="<%= question.content[i] %>">
+            <input type="checkbox" id="checkbox-<%= i %>" name="sentences" value="<%= question.content[i] %>">
             <label for="sentence-<%= i %>"><%= question.content[i] %></label><br>
         <% } %>
     </form>
 
     <a href="#"><%= question.link %></a>
     <br />
-    <a href="/checkAns">Check Answer</a>
+    <a id="checkBtn" href="#">Check Answer</a>
   </body>
 </html>
