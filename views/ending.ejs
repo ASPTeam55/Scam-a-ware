@@ -7,8 +7,9 @@
 </head>
 <body>
     <h2>Answer correct: <%= correct_count %>/<%= total_count %></h2>
-    <% if(correct_count / total_count > 0.5){ %>
-        <h1>Congradulations!!!</h1>
+    <% const pass = (correct_count / total_count > 0.5); %>
+    <% if(pass){ %>
+        <h1>Congratulations!!!</h1>
     <% } else{ %>
         <h1>Try again...</h1>
     <% } %>
