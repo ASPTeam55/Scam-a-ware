@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const username = usernameInput.value.trim();
     if (username === '') {
       console.log('Error: Username is empty');
-      alert('Error: Username is empty!');
+      alert('Please enter your Username');
     } else {
       playClickSoundAndRedirect(username); // Play sound and redirect
     }

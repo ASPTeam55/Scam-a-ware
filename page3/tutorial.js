@@ -30,8 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
   
     // Update the welcome message with the username
     const welcomeMessage = document.getElementById('welcomeMessage');
-    welcomeMessage.textContent = `Hi there, ${username}`;
-    console.log(`Welcome message updated: Hi there, ${username}`);
+    welcomeMessage.textContent = `Hello there, ${username}`;
+    console.log(`Welcome message updated: Hello there, ${username}`);
 
     // Retrieve the start quiz button and add click event listener
     const startQuizButton = document.getElementById('startQuiz');
