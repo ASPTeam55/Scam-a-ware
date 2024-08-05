@@ -21,7 +21,7 @@
     </p>
 
     <!-- hidden form -->
-    <form id="hidden_form" action="/checkAns" method="post">
+    <form id="hidden_form" action="/checkAns" method="post" style="display: none;">
         <% for(let i = 0; i < question.content.length; ++i){ %>
             <input type="checkbox" id="checkbox-<%= i %>" name="sentences" value="<%= question.content[i] %>">
             <label for="sentence-<%= i %>"><%= question.content[i] %></label><br>
