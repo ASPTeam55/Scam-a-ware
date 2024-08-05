@@ -23,8 +23,7 @@ input[type="text"] {
 /* Style the buttons */
 button {
     background-color: #ff00ff;
-    border: 2px solid #00ff00;
-    color: #00ff00;
+    color: white;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;

@@ -86,8 +86,7 @@ p {
   /* Style the buttons */
   button {
     background-color: #ff00ff;
-    border: 2px solid #00ff00;
-    color: #00ff00;
+    color: white;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
@@ -98,6 +97,7 @@ p {
 
 /* Change button color on hover */
 button:hover {
-    background-color: #00ff00;
+  background-color: #00ff00;
+    box-shadow: 0px 0px 10px rgba(0, 255, 0, 0.7);
     color: #000;
 }
