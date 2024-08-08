@@ -60,6 +60,8 @@ router.get("/ending", (req, res) => {
             "textSelectEnding.ejs",
             {correct_count: global.answer_correct_count, total_count: total_quesion_count}
         );
+        
+        global.question_index %= total_quesion_count;
     }
     else{
         res.redirect("/");
