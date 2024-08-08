@@ -7,7 +7,7 @@ router.get("/", (req, res) => {
     question.content.splice(question.content.length - 1, 1);
 
     res.render(
-        "index.ejs",
+        "textSelectQuestion.ejs",
         {question: question}
     );
 });
@@ -37,7 +37,7 @@ router.post("/checkAns", (req, res) => {
     const total_quesion_count = global.question_data.length;
     if(global.question_index >= total_quesion_count){
         res.render(
-            "ending.ejs",
+            "textSelectEnding.ejs",
             {correct_count: global.answer_correct_count, total_count: total_quesion_count}
         );
     }
@@ -50,7 +50,7 @@ router.get("/checkAns", (req, res) => {
     const total_quesion_count = global.question_data.length;
     if(global.question_index >= total_quesion_count){
         res.render(
-            "ending.ejs",
+            "textSelectEnding.ejs",
             {correct_count: global.answer_correct_count, total_count: total_quesion_count}
         );
     }
