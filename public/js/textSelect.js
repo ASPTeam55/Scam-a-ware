@@ -24,3 +24,18 @@ checkBtn.addEventListener("click", (e) => {
     e.preventDefault();
     hidden_form.submit();
 });
+
+const botImage = document.getElementById('botImage');
+// Retrieve the selected bot from sessionStorage
+const selectedBot = sessionStorage.getItem('selectedBot');
+console.log(`Retrieved selected bot from sessionStorage: ${selectedBot}`);
+
+// Update the bot image based on the selected bot
+const selectedBotData = bots.find(bot => bot.name === selectedBot);
+if (selectedBotData) {
+    botImage.src = selectedBotData.image;
+    botImage.alt = `Bot ${selectedBotData.name}`;
+} else {
+    console.error('Unrecognized bot selection:', selectedBot);
+    botImage.style.display = 'none'; // Hide the bot image if the selection is invalid
+}

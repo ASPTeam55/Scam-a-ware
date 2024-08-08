@@ -1,0 +1,12 @@
+.hilighted {
+    background-color: gold;
+    border-radius: 5px;
+}
+
+.oneSentence:hover {
+    cursor: pointer;
+}
+
+.email_content {
+    text-align: left;
+}

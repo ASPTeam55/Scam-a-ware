@@ -4,32 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Text select</title>
-    <link rel="stylesheet" type="text/css" href="/css/main.css" />
-    <script src="/js/main.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="/css/global.css" />
+    <link rel="stylesheet" type="text/css" href="/css/quiz.css" />
+    <link rel="stylesheet" type="text/css" href="/css/textSelect.css" />
+    <script src="/js/textSelect.js" defer></script>
   </head>
   <body>
-    <h1>Text Select</h1>
+    <div class="container">
+      <!-- Game Title -->
+      <h1 id="game-name">SCAM-A-WARE</h1>
+  
+      <h2 id="quiz-title">Text Select</h2>
+  
+      <div id="score-container">
+        <img id="botImage" alt="Bot NPC" class="bot-image">
+        <!-- <img id="botImage" src="/images/Alien.png" alt="Bot NPC" class="bot-image"> -->
 
-    <p><b>Sender email: </b><%= question.sender_email %></p>
-    <p><b>Recipient email: </b><%= question.recipient_email %></p>
-    <p><b>Subject: </b><%= question.subject %></p>
-    <p>
-      <b>Content: </b> <br />
-      <% for(let i = 0; i < question.content.length; ++i){ %>
-      <span class="oneSentence" data-index="<%= i %>"><%= question.content[i] %>.</span>
-      <% } %>
-    </p>
 
-    <!-- hidden form -->
-    <form id="hidden_form" action="/checkAns" method="post" style="display: none;">
-        <% for(let i = 0; i < question.content.length; ++i){ %>
-            <input type="checkbox" id="checkbox-<%= i %>" name="sentences" value="<%= question.content[i] %>">
-            <label for="sentence-<%= i %>"><%= question.content[i] %></label><br>
-        <% } %>
-    </form>
+        <h3>Score: <span id="score">0</span></h3> <!-- Ensure initial score is set to 0 -->
+      </div>
+  
+      <div id="quiz-container">
 
-    <a href="#"><%= question.link %></a>
-    <br />
-    <a id="checkBtn" href="#">Check Answer</a>
+        <p class="email_content"><b>Sender email: </b><%= question.sender_email %></p>
+        <p class="email_content"><b>Recipient email: </b><%= question.recipient_email %></p>
+        <p class="email_content"><b>Subject: </b><%= question.subject %></p>
+        <p class="email_content">
+          <b>Content: </b> <br />
+          <% for(let i = 0; i < question.content.length; ++i){ %>
+          <span class="oneSentence" data-index="<%= i %>"><%= question.content[i] %>.</span>
+          <% } %>
+        </p>
+
+        <!-- hidden form -->
+        <form id="hidden_form" action="/checkAns" method="post" style="display: none;">
+            <% for(let i = 0; i < question.content.length; ++i){ %>
+                <input type="checkbox" id="checkbox-<%= i %>" name="sentences" value="<%= question.content[i] %>">
+                <label for="sentence-<%= i %>"><%= question.content[i] %></label><br>
+            <% } %>
+        </form>
+
+        <a href="#"><%= question.link %></a>
+        <br />
+        <a id="checkBtn" href="#">Check Answer</a>
+      </div>
+    </div>
+    <div class="grid"></div>
+
   </body>
 </html>
