@@ -21,8 +21,9 @@ const textSelect = require("./routes/textSelectRoute");
 app.use("/text-select", textSelect);
 
 app.get("/", (req, res) => {
-    res.redirect("/text-select");
-})
+    // res.redirect("/text-select");
+    res.render("mcq.ejs");
+});
 
 app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);

@@ -1,0 +1,16 @@
+{
+    "questions": [
+      {
+        "question": "What is the capital of France?",
+        "options": ["Berlin", "Paris", "London", "Rome"],
+        "tooltip": "The capital of France is Paris.",
+        "correct": 1
+      },
+      {
+        "question": "What is the largest planet in our solar system?",
+        "options": ["Earth", "Saturn", "Jupiter", "Uranus"],
+        "tooltip": "The largest planet in our solar system is Jupiter.",
+        "correct": 2
+      }
+    ]
+  }
