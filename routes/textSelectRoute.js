@@ -62,6 +62,7 @@ router.get("/ending", (req, res) => {
         );
         
         global.question_index %= total_quesion_count;
+        global.answer_correct_count = 0;
     }
     else{
         res.redirect("/");
