@@ -36,10 +36,7 @@ router.post("/checkAns", (req, res) => {
 
     const total_quesion_count = global.question_data.length;
     if(global.question_index >= total_quesion_count){
-        res.render(
-            "textSelectEnding.ejs",
-            {correct_count: global.answer_correct_count, total_count: total_quesion_count}
-        );
+        res.redirect("/text-select/ending");
     }
     else{
         res.redirect("/text-select");
@@ -47,6 +44,16 @@ router.post("/checkAns", (req, res) => {
 });
 
 router.get("/checkAns", (req, res) => {
+    const total_quesion_count = global.question_data.length;
+    if(global.question_index >= total_quesion_count){
+        res.redirect("/text-select/ending");
+    }
+    else{
+        res.redirect("/");
+    }
+});
+
+router.get("/ending", (req, res) => {
     const total_quesion_count = global.question_data.length;
     if(global.question_index >= total_quesion_count){
         res.render(
