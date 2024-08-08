@@ -11,24 +11,21 @@
 
     <div class="container">
         <!-- Game Title -->
-        <h1>SCAM-A-WARE</h1>
+        <h1 id="game-name">SCAM-A-WARE</h1>
     
         <h2 id="quiz-title">Quiz Title</h2>
-    
-        <!-- <div id="score-container">
-          <img id="botImage" alt="Bot NPC" class="bot-image">
-          <h3>Score: <span id="score">0</span></h3>
-        </div> -->
     
         <div id="quiz-container">
           <!-- Quiz content will be dynamically inserted here -->
           <h2>Answer correct: <%= correct_count %>/<%= total_count %></h2>
           <% const pass = (correct_count / total_count > 0.5); %>
           <% if(pass){ %>
-              <h1>Congratulations!!!</h1>
+              <h2>Congratulations!!!</h1>
           <% } else{ %>
-              <h1>Try again...</h1>
+              <h2>Try again...</h1>
           <% } %>
+
+          <a href="/text-select/" class="link-button">Play again</a>
         </div>
       </div>
       <div class="grid"></div>
