@@ -1,79 +1,25 @@
-/* Bot NPC image */
-#botImage {
-  width: 100px; /* Adjust size as needed */
-  height: 100px;
-}
-
-/* Style the quiz container */
-#quiz-container {
-  margin: 10px auto; /* Center the container horizontally and add vertical margin */
-  background-color: rgba(0, 0, 0, 0.8); /* Slightly darker background for the quiz */
-  padding: 10px; /* Reduced padding for a smaller container */
-  border-radius: 8px; /* Slightly smaller border radius */
-  box-shadow: 0px 0px 8px rgba(0, 255, 0, 0.7); /* Reduced shadow size */
-  width: 90%; /* Set a width for centering */
-  max-width: 600px; /* Optional: Set a max width to control the container size */
-}
-
-/* Style quiz question images */
-.question img {
-  display: block;
-  margin: 10px auto; /* Center the image and add margin */
-  max-width: 40%; /* Make images smaller */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 10px; /* Rounded corners for a retro look */
-}
-
-/* Style the quiz title */
-#quiz-title {
-  margin-top: 20px;
-  color: #ff00ff; /* Neon pink color for quiz title */
-}
-
-/* Container for quiz questions */
-.question {
-  margin-bottom: 20px;
-}
-
-/* Style for images in questions */
-.question img {
-  max-width: 100%;
-  border-radius: 10px;
-}
-
-/* Style for feedback messages */
-.feedback {
-  margin-top: 10px;
-  padding: 10px;
-}
-
-.feedback-correct {
-  color: #00ff00; /* Green for correct answers */
-}
-
-.feedback-incorrect {
-  color: #ff0000; /* Red for incorrect answers */
-}
-
-/* Navigation buttons */
-.navigation {
-  margin-top: 20px;
-}
-
-.nav-button {
-  margin: 0 10px;
-  padding: 10px 20px;
-  font-size: 16px;
-}
-
-/* Container for score and bot image */
-#score-container {
+.container {
   display: flex;
-  align-items: center;
-  margin-top: 20px; /* Ensure there's space at the top */
-  justify-content: flex-start; /* Align items to the left */
+  flex-direction: row;
 }
 
-#score-container h3 {
-  margin-right: 10px; /* Space between score and bot image */
+.left-box {
+  width: 35%;
+  padding: 20px;
+  border: 1px solid #ccc; /* Added border */
+  text-align: left;
+}
+
+.right-box {
+  width: 65%;
+  padding: 20px;
+  border: 1px solid #ccc; /* Added border */
+  text-align: left;
+  p { display: flex; align-items: center; }
+}
+
+.highlighted {
+  background-color: yellow; /* Highlight color */
+  padding: 2px; /* Add padding around highlighted text */
+  border-radius: 5px; /* Rounded corners */
 }
