@@ -30,14 +30,14 @@
       ],
       "answers": [
         "Click here to verify your account: http://phishingsite.com/Verify Now",
-        "your account will be suspended due to suspicious activity"
+        "Dear {username}, your account will be suspended due to suspicious activity"
       ]
     },
     {
       "sender_email": "support@securelogin.com",
       "recipient_email": "{username}@user.com",
       "subject": "Security Update: Download Now",
-      "content": "Dear {username}, download our latest security update: http://malwaresite.com/Download Now",
+      "content": "Dear {username}, download our latest security update: http://malwaresite.com/Download Now. Thank you",
       "mcq": "What raises suspicion about this email?",
       "mcq_options": [
         {
@@ -62,8 +62,7 @@
         }
       ],
       "answers": [
-        "download our latest security update: http://malwaresite.com/Download Now",
-        "download our latest security update"
+        "Dear {username}, download our latest security update: http://malwaresite.com/Download Now"
       ]
     }
   ]
