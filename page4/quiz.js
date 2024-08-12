@@ -1,6 +1,11 @@
 let data;
 let question_index = 0;
 let score = 0;
+let game_mode = 0;
+const mode = {
+  MCQ: 0,
+  TEXTSELECT: 1
+};
 
 fetch('quiz.json')
   .then(response => response.json())
@@ -41,38 +46,38 @@ function load_mcq(){
   });
 
   document.getElementById('submit-button').innerHTML = 'Submit';
-  document.getElementById('submit-button').addEventListener('click', submit_mcq);
+  document.getElementById('submit-button').addEventListener('click', submit);
 } 
 
-function submit_mcq(){
-  question = data.question[question_index];
+// function submit_mcq(){
+//   question = data.question[question_index];
 
-  const selectedOption = document.querySelector('input[name="mcq-option"]:checked').value;
-  const correctAnswer = question.mcq_options.find(option => option.correct).option;
-  const selectedTooltip = question.mcq_options.find(option => option.option === selectedOption).tooltip;
+//   const selectedOption = document.querySelector('input[name="mcq-option"]:checked').value;
+//   const correctAnswer = question.mcq_options.find(option => option.correct).option;
+//   const selectedTooltip = question.mcq_options.find(option => option.option === selectedOption).tooltip;
 
-  // Update MCQ text
-  if (selectedOption === correctAnswer) {
-    score++; 
-    document.getElementById('mcq').innerHTML = 'Correct!';
-  } else {
-    document.getElementById('mcq').innerHTML = 'Incorrect!';
-  }
+//   // Update MCQ text
+//   if (selectedOption === correctAnswer) {
+//     score++; 
+//     document.getElementById('mcq').innerHTML = 'Correct!';
+//   } else {
+//     document.getElementById('mcq').innerHTML = 'Incorrect!';
+//   }
 
-  const optionsContainer = document.getElementById('mcq-options');
-  while (optionsContainer.firstChild) {
-      optionsContainer.removeChild(optionsContainer.firstChild);
-  }
+//   const optionsContainer = document.getElementById('mcq-options');
+//   while (optionsContainer.firstChild) {
+//       optionsContainer.removeChild(optionsContainer.firstChild);
+//   }
 
-  //add tooltip
-  const selectedOptionElement = document.createElement('div');
-  selectedOptionElement.innerHTML = `${selectedTooltip}`;
-  optionsContainer.appendChild(selectedOptionElement);
+//   //add tooltip
+//   const selectedOptionElement = document.createElement('div');
+//   selectedOptionElement.innerHTML = `${selectedTooltip}`;
+//   optionsContainer.appendChild(selectedOptionElement);
 
-  document.getElementById('submit-button').innerHTML = 'Next';
-  document.getElementById('submit-button').removeEventListener('click', submit_mcq);
-  document.getElementById('submit-button').addEventListener('click', highlight);
-}
+//   document.getElementById('submit-button').innerHTML = 'Next';
+//   document.getElementById('submit-button').removeEventListener('click', submit_mcq);
+//   document.getElementById('submit-button').addEventListener('click', highlight);
+// }
 
 function highlight(){
   question = data.question[question_index];
@@ -106,52 +111,129 @@ function highlight(){
   document.getElementById('submit-button').innerHTML = 'submit';
   document.getElementById('submit-button').style.display = 'none';
   document.getElementById('submit-button').removeEventListener('click', highlight);
-  document.getElementById('submit-button').addEventListener('click', submit_highlight);
+  document.getElementById('submit-button').addEventListener('click', submit);
   
 }
 
-function submit_highlight(){
+// function submit_highlight(){
+//   question = data.question[question_index];
+
+//   const highlight_sentences = document.querySelectorAll('.highlighted');
+//   let allCorrect = true; // if all highlighted sentences are correct answers
+//   highlight_sentences.forEach(sentence => {
+//     // Remove the normal highlight
+//     sentence.classList.remove('highlighted');
+
+//     // Extract and trim the content of the sentence
+//     const sentence_content = sentence.innerHTML.replace(". ", "");
+
+//     // Display correct/wrong highlight
+//     const isCorrect = question.answers.includes(sentence_content);
+//     if(isCorrect){
+//       sentence.classList.add('highlighted-correct');
+//     } else {
+//       sentence.classList.add('highlighted-wrong');
+//       allCorrect = false;
+//     }
+//   });
+
+//   const optionsContainer = document.getElementById('mcq-options');
+//   while (optionsContainer.firstChild) {
+//       optionsContainer.removeChild(optionsContainer.firstChild);
+//   }
+
+//   if(allCorrect){
+//     document.getElementById('mcq').innerHTML = '<em>Correct</em>';
+//   } else {
+//     document.getElementById('mcq').innerHTML = '<em>Wrong</em>. Here are the correct answers: ';
+
+//     question.answers.forEach((answer, index) => {
+//       const answerElement = document.createElement('div');
+//       answerElement.innerHTML = `${index + 1}. ${answer}`;
+//       document.getElementById('mcq-options').appendChild(answerElement);
+//     });
+//   }
+
+//   document.getElementById('submit-button').innerHTML = 'next';
+//   document.getElementById('submit-button').removeEventListener('click', submit_highlight);
+//   document.getElementById('submit-button').addEventListener('click', loadNextQuestion);
+// }
+
+function submit() {
   question = data.question[question_index];
 
-  const highlight_sentences = document.querySelectorAll('.highlighted');
-  let allCorrect = true; // if all highlighted sentences are correct answers
-  highlight_sentences.forEach(sentence => {
-    // Remove the normal highlight
-    sentence.classList.remove('highlighted');
+  // In MCQ mode
+  if(game_mode == mode.MCQ) {
+    const selectedOption = document.querySelector('input[name="mcq-option"]:checked').value;
+    const correctAnswer = question.mcq_options.find(option => option.correct).option;
+    const selectedTooltip = question.mcq_options.find(option => option.option === selectedOption).tooltip;
 
-    // Extract and trim the content of the sentence
-    const sentence_content = sentence.innerHTML.replace(". ", "");
-
-    // Display correct/wrong highlight
-    const isCorrect = question.answers.includes(sentence_content);
-    if(isCorrect){
-      sentence.classList.add('highlighted-correct');
+    // Update MCQ text
+    if (selectedOption === correctAnswer) {
+      score++; 
+      document.getElementById('mcq').innerHTML = 'Correct!';
     } else {
-      sentence.classList.add('highlighted-wrong');
-      allCorrect = false;
+      document.getElementById('mcq').innerHTML = 'Incorrect!';
     }
-  });
 
-  const optionsContainer = document.getElementById('mcq-options');
-  while (optionsContainer.firstChild) {
-      optionsContainer.removeChild(optionsContainer.firstChild);
-  }
+    const optionsContainer = document.getElementById('mcq-options');
+    while (optionsContainer.firstChild) {
+        optionsContainer.removeChild(optionsContainer.firstChild);
+    }
 
-  if(allCorrect){
-    document.getElementById('mcq').innerHTML = '<em>Correct</em>';
-  } else {
-    document.getElementById('mcq').innerHTML = '<em>Wrong</em>. Here are the correct answers: ';
+    //add tooltip
+    const selectedOptionElement = document.createElement('div');
+    selectedOptionElement.innerHTML = `${selectedTooltip}`;
+    optionsContainer.appendChild(selectedOptionElement);
 
-    question.answers.forEach((answer, index) => {
-      const answerElement = document.createElement('div');
-      answerElement.innerHTML = `${index + 1}. ${answer}`;
-      document.getElementById('mcq-options').appendChild(answerElement);
+    document.getElementById('submit-button').innerHTML = 'Next';
+    document.getElementById('submit-button').removeEventListener('click', submit);
+    document.getElementById('submit-button').addEventListener('click', highlight);
+  } 
+  // In text select mode
+  else if(game_mode == mode.TEXTSELECT){
+    const highlight_sentences = document.querySelectorAll('.highlighted');
+    let allCorrect = true; // if all highlighted sentences are correct answers
+    highlight_sentences.forEach(sentence => {
+      // Remove the normal highlight
+      sentence.classList.remove('highlighted');
+
+      // Extract and trim the content of the sentence
+      const sentence_content = sentence.innerHTML.replace(". ", "");
+
+      // Display correct/wrong highlight
+      const isCorrect = question.answers.includes(sentence_content);
+      if(isCorrect){
+        sentence.classList.add('highlighted-correct');
+      } else {
+        sentence.classList.add('highlighted-wrong');
+        allCorrect = false;
+      }
     });
+
+    const optionsContainer = document.getElementById('mcq-options');
+    while (optionsContainer.firstChild) {
+        optionsContainer.removeChild(optionsContainer.firstChild);
+    }
+
+    if(allCorrect){
+      document.getElementById('mcq').innerHTML = '<em>Correct</em>';
+    } else {
+      document.getElementById('mcq').innerHTML = '<em>Wrong</em>. Here are the correct answers: ';
+
+      question.answers.forEach((answer, index) => {
+        const answerElement = document.createElement('div');
+        answerElement.innerHTML = `${index + 1}. ${answer}`;
+        document.getElementById('mcq-options').appendChild(answerElement);
+      });
+    }
+
+    document.getElementById('submit-button').innerHTML = 'next';
+    document.getElementById('submit-button').removeEventListener('click', submit);
+    document.getElementById('submit-button').addEventListener('click', loadNextQuestion);
   }
 
-  document.getElementById('submit-button').innerHTML = 'next';
-  document.getElementById('submit-button').removeEventListener('click', submit_highlight);
-  document.getElementById('submit-button').addEventListener('click', loadNextQuestion);
+  game_mode = (game_mode + 1) % 2;
 }
 
 function loadNextQuestion() {
@@ -161,7 +243,7 @@ function loadNextQuestion() {
     load_mcq();
     document.getElementById('submit-button').innerHTML = 'Submit';
     document.getElementById('submit-button').removeEventListener('click', loadNextQuestion);
-    document.getElementById('submit-button').addEventListener('click', submit_mcq);
+    document.getElementById('submit-button').addEventListener('click', submit);
   } else {
     localStorage.setItem('score', score);
     window.location.href = '../page5/results.html';  // Adjust the path if necessary
