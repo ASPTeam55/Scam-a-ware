@@ -75,6 +75,8 @@ function highlight(){
 
   // Display sentences
   sentences.forEach((sentence, index) => {
+    sentence = sentence.replaceAll('{username}', sessionStorage.getItem('username'));
+    console.log(sentence);
     const sentenceElement = document.createElement('span');
     sentenceElement.className = 'oneSentence';
     sentenceElement.dataset.index = index;
