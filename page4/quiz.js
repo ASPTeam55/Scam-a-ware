@@ -163,7 +163,7 @@ function submit() {
   question = data.question[question_index];
 
   // In MCQ mode
-  if(game_mode == mode.MCQ) {
+  if(game_mode === mode.MCQ) {
     const selectedOption = document.querySelector('input[name="mcq-option"]:checked').value;
     const correctAnswer = question.mcq_options.find(option => option.correct).option;
     const selectedTooltip = question.mcq_options.find(option => option.option === selectedOption).tooltip;
@@ -191,25 +191,31 @@ function submit() {
     document.getElementById('submit-button').addEventListener('click', highlight);
   } 
   // In text select mode
-  else if(game_mode == mode.TEXTSELECT){
+  else if(game_mode === mode.TEXTSELECT){
+    const correct_answers = question.answers;
     const highlight_sentences = document.querySelectorAll('.highlighted');
     let allCorrect = true; // if all highlighted sentences are correct answers
-    highlight_sentences.forEach(sentence => {
-      // Remove the normal highlight
-      sentence.classList.remove('highlighted');
 
-      // Extract and trim the content of the sentence
-      const sentence_content = sentence.innerHTML.replace(". ", "");
-
-      // Display correct/wrong highlight
-      const isCorrect = question.answers.includes(sentence_content);
-      if(isCorrect){
-        sentence.classList.add('highlighted-correct');
-      } else {
-        sentence.classList.add('highlighted-wrong');
-        allCorrect = false;
-      }
+    correct_answers.forEach(answer => {
+      
     });
+
+    // highlight_sentences.forEach(sentence => {
+    //   // Remove the normal highlight
+    //   sentence.classList.remove('highlighted');
+
+    //   // Extract and trim the content of the sentence
+    //   const sentence_content = sentence.innerHTML.replace(". ", "");
+
+    //   // Display correct/wrong highlight
+    //   const isCorrect = question.answers.includes(sentence_content);
+    //   if(isCorrect){
+    //     sentence.classList.add('highlighted-correct');
+    //   } else {
+    //     sentence.classList.add('highlighted-wrong');
+    //     allCorrect = false;
+    //   }
+    // });
 
     const optionsContainer = document.getElementById('mcq-options');
     while (optionsContainer.firstChild) {
@@ -217,6 +223,7 @@ function submit() {
     }
 
     if(allCorrect){
+      score++;
       document.getElementById('mcq').innerHTML = '<em>Correct</em>';
     } else {
       document.getElementById('mcq').innerHTML = '<em>Wrong</em>. Here are the correct answers: ';
@@ -254,8 +261,10 @@ function toggleHighlight(sentenceElement, answerCount) {
   sentenceElement.classList.toggle('highlighted');
 
   const highlightCount = document.querySelectorAll('.highlighted').length;
+  const submitBtn = document.getElementById('submit-button');
   if(highlightCount === answerCount){
-    const submitBtn = document.getElementById('submit-button');
     submitBtn.style.display = 'block';
+  } else {
+    submitBtn.style.display = 'none';
   }
 }
