@@ -52,36 +52,6 @@ function load_mcq(){
   document.getElementById('submit-button').addEventListener('click', submit);
 } 
 
-// function submit_mcq(){
-//   question = data.question[question_index];
-
-//   const selectedOption = document.querySelector('input[name="mcq-option"]:checked').value;
-//   const correctAnswer = question.mcq_options.find(option => option.correct).option;
-//   const selectedTooltip = question.mcq_options.find(option => option.option === selectedOption).tooltip;
-
-//   // Update MCQ text
-//   if (selectedOption === correctAnswer) {
-//     score++; 
-//     document.getElementById('mcq').innerHTML = 'Correct!';
-//   } else {
-//     document.getElementById('mcq').innerHTML = 'Incorrect!';
-//   }
-
-//   const optionsContainer = document.getElementById('mcq-options');
-//   while (optionsContainer.firstChild) {
-//       optionsContainer.removeChild(optionsContainer.firstChild);
-//   }
-
-//   //add tooltip
-//   const selectedOptionElement = document.createElement('div');
-//   selectedOptionElement.innerHTML = `${selectedTooltip}`;
-//   optionsContainer.appendChild(selectedOptionElement);
-
-//   document.getElementById('submit-button').innerHTML = 'Next';
-//   document.getElementById('submit-button').removeEventListener('click', submit_mcq);
-//   document.getElementById('submit-button').addEventListener('click', highlight);
-// }
-
 function highlight(){
   question = data.question[question_index];
 
@@ -92,11 +62,13 @@ function highlight(){
       optionsContainer.removeChild(optionsContainer.firstChild);
   }
 
+  // Display highlight counter
+  const answerCount = question["answers"].length; // Number of correct answers
+  optionsContainer.innerHTML = `Answer select: 0/${answerCount}`;
+
   const contentElement = document.getElementById('content');
   const sentences = question.content.split('. ');
 
-  // Number of correct answers
-  const answerCount = question["answers"].length;
 
   // Clear previous content
   contentElement.innerHTML = '';
@@ -117,50 +89,6 @@ function highlight(){
   document.getElementById('submit-button').addEventListener('click', submit);
   
 }
-
-// function submit_highlight(){
-//   question = data.question[question_index];
-
-//   const highlight_sentences = document.querySelectorAll('.highlighted');
-//   let allCorrect = true; // if all highlighted sentences are correct answers
-//   highlight_sentences.forEach(sentence => {
-//     // Remove the normal highlight
-//     sentence.classList.remove('highlighted');
-
-//     // Extract and trim the content of the sentence
-//     const sentence_content = sentence.innerHTML.replace(". ", "");
-
-//     // Display correct/wrong highlight
-//     const isCorrect = question.answers.includes(sentence_content);
-//     if(isCorrect){
-//       sentence.classList.add('highlighted-correct');
-//     } else {
-//       sentence.classList.add('highlighted-wrong');
-//       allCorrect = false;
-//     }
-//   });
-
-//   const optionsContainer = document.getElementById('mcq-options');
-//   while (optionsContainer.firstChild) {
-//       optionsContainer.removeChild(optionsContainer.firstChild);
-//   }
-
-//   if(allCorrect){
-//     document.getElementById('mcq').innerHTML = '<em>Correct</em>';
-//   } else {
-//     document.getElementById('mcq').innerHTML = '<em>Wrong</em>. Here are the correct answers: ';
-
-//     question.answers.forEach((answer, index) => {
-//       const answerElement = document.createElement('div');
-//       answerElement.innerHTML = `${index + 1}. ${answer}`;
-//       document.getElementById('mcq-options').appendChild(answerElement);
-//     });
-//   }
-
-//   document.getElementById('submit-button').innerHTML = 'next';
-//   document.getElementById('submit-button').removeEventListener('click', submit_highlight);
-//   document.getElementById('submit-button').addEventListener('click', loadNextQuestion);
-// }
 
 function submit() {
   question = data.question[question_index];
@@ -261,8 +189,10 @@ function loadNextQuestion() {
 }
 
 function toggleHighlight(sentenceElement, answerCount) {
+  // Add/remove highlight
   sentenceElement.classList.toggle('highlighted');
 
+  // Display/hide the submit button
   const highlightCount = document.querySelectorAll('.highlighted').length;
   const submitBtn = document.getElementById('submit-button');
   if(highlightCount === answerCount){
@@ -270,4 +200,8 @@ function toggleHighlight(sentenceElement, answerCount) {
   } else {
     submitBtn.style.display = 'none';
   }
+
+  // Display highlight counter
+  const optionsContainer = document.getElementById('mcq-options');
+  optionsContainer.innerHTML = `Answer select: ${highlightCount}/${answerCount}`;
 }
