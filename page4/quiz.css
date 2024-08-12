@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.left-box {
+  width: 35%;
+  padding: 20px;
+  border: 1px solid #ccc; /* Added border */
+  text-align: left;
+}
+
+.right-box {
+  width: 65%;
+  padding: 20px;
+  border: 1px solid #ccc; /* Added border */
+  text-align: left;
+  p { display: flex; align-items: center; }
+}
+
+.highlighted {
+  color: black;
+  background-color: yellow; /* Highlight color */
+  padding: 2px; /* Add padding around highlighted text */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.highlighted-correct {
+  color: black;
+  background-color: lime; /* Highlight wrong color */
+  padding: 2px; /* Add padding around highlighted text */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.highlighted-wrong {
+  color: black;
+  background-color: red; /* Highlight wrong color */
+  padding: 2px; /* Add padding around highlighted text */
+  border-radius: 5px; /* Rounded corners */
+}

@@ -1,0 +1,39 @@
+/* Add some margin to the form container */
+.form-container {
+    margin-top: 20px; /* Adjusted margin for better spacing */
+}
+
+/* Align the input group items */
+.input-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style the input field */
+input[type="text"] {
+    background-color: #000;
+    border: 2px solid #00ff00;
+    color: #A9A9A9;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 10px rgba(0, 255, 0, 0.7);
+    font-family: 'Press Start 2P', cursive; /* Retro pixelated font */
+}
+/* Style the buttons */
+button {
+    background-color: #ff00ff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-family: 'Press Start 2P', cursive; /* Retro pixelated font */
+    font-size: 1.2em; /* Larger font size for buttons */
+  }
+
+/* Change button color on hover */
+button:hover {
+    background-color: #00ff00;
+    color: #000;
+}

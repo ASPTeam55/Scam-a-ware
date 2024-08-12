@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quiz Results</title>
+	<link rel="stylesheet" href="../index/global.css">
+</head>
+<body>
+	<h1>Quiz Results</h1>
+	<p>Your Score:</p>
+	<h2 id="score"></h2>
+	<p>Thanks for playing!</p>
+	<button id="play-again">Play Again</button>
+
+	<script>
+        const score = localStorage.getItem('score');
+        document.getElementById('score').innerHTML = `You scored ${score} out of 2`;
+		document.getElementById('play-again').addEventListener('click', () => {
+    		window.location.href = '../index.html'; // Adjust the path as needed
+  		});
+    </script>
+</body>
+</html>
