@@ -19,12 +19,13 @@ fetch('quiz.json')
 function load_email(){
     question = data.question[question_index];
 
-    
+    const recipient_email = question.recipient_email.replaceAll("{username}", sessionStorage.getItem('username'));
+    const email_content = question.content.replaceAll('{username}', sessionStorage.getItem('username'));
 
     document.getElementById('sender-email').innerHTML = question.sender_email;
-    document.getElementById('recipient-email').innerHTML = question.recipient_email;
+    document.getElementById('recipient-email').innerHTML = recipient_email;
     document.getElementById('subject').innerHTML = question.subject;
-    document.getElementById('content').innerHTML = question.content;
+    document.getElementById('content').innerHTML = email_content;
 }
 
 function load_mcq(){
