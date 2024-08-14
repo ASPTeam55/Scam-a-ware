@@ -1,40 +1,117 @@
-.container {
+/* Flex container for layout */
+.innercontainer {
   display: flex;
   flex-direction: row;
+  gap: 20px; /* Increased space between boxes */
 }
 
+/* Left box styling */
 .left-box {
   width: 35%;
   padding: 20px;
-  border: 1px solid #ccc; /* Added border */
+  border: 1px solid #ffffff; /* White border to stand out against the gradient */
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white for better visibility */
   text-align: left;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Enhanced shadow for more depth */
+  color: #000000; /* Black text color */
 }
 
+/* Right box styling */
 .right-box {
   width: 65%;
   padding: 20px;
-  border: 1px solid #ccc; /* Added border */
-  text-align: left;
-  p { display: flex; align-items: center; }
+  border: 1px solid #ffffff; /* White border to stand out against the gradient */
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white for better visibility */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Enhanced shadow for more depth */
+  color: #000000; /* Black text color */
+  position: relative; /* To position window controls absolutely */
 }
 
+/* Window controls container for right-box */
+.right-box .window-controls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 5px; /* Space between buttons */
+}
+
+/* Style for individual window control buttons */
+.right-box .control-button {
+  width: 15px; /* Width of the buttons */
+  height: 15px; /* Height of the buttons */
+  border-radius: 50%; /* Circular buttons */
+  border: 1px solid #000000; /* Border for buttons */
+  background-color: #ffffff; /* White background for visibility */
+  cursor: pointer;
+}
+
+/* Colors for control buttons */
+.right-box .control-button.close {
+  background-color: #ff5f5f; /* Red for close button */
+}
+
+.right-box .control-button.maximize {
+  background-color: #ffcc00; /* Yellow for maximize button */
+}
+
+.right-box .control-button.minimize {
+  background-color: #00c700; /* Green for minimize button */
+}
+
+/* Highlighted text styling */
 .highlighted {
-  color: black;
-  background-color: yellow; /* Highlight color */
-  padding: 2px; /* Add padding around highlighted text */
-  border-radius: 5px; /* Rounded corners */
+  color: #000000; /* Black text color for high contrast */
+  background-color: #ffff00; /* Classic yellow for highlighting */
+  padding: 4px 6px; /* Padding for better readability */
+  border-radius: 4px; /* Rounded corners for a retro feel */
 }
 
 .highlighted-correct {
-  color: black;
-  background-color: lime; /* Highlight wrong color */
-  padding: 2px; /* Add padding around highlighted text */
-  border-radius: 5px; /* Rounded corners */
+  color: #000000; /* Black text color for high contrast */
+  background-color: #00ff00; /* Bright green for correct answers */
+  padding: 4px 6px; /* Consistent padding */
+  border-radius: 4px; /* Rounded corners */
 }
 
 .highlighted-wrong {
-  color: black;
-  background-color: red; /* Highlight wrong color */
-  padding: 2px; /* Add padding around highlighted text */
-  border-radius: 5px; /* Rounded corners */
+  color: #000000; /* Black text color for high contrast */
+  background-color: #ff0000; /* Bright red for wrong answers */
+  padding: 4px 6px; /* Consistent padding */
+  border-radius: 4px; /* Rounded corners */
+}
+
+/* Style for individual email details */
+.email-detail {
+  margin: 10px 0; /* Space between details */
+  padding: 10px; /* Padding for separation */
+  border: 1px solid #cccccc; /* Light gray border for separation */
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly different background for clarity */
+  color: #000000; /* Black text color */
+  text-align: left;
+}
+
+/* Style for email content */
+.email-content {
+  margin-top: 10px; /* Space above content */
+  padding: 10px; /* Padding for content area */
+  background-color: rgba(255, 255, 255, 0.85); /* Different background color for content */
+  color: #000000; /* Black text color */
+  text-align: left;
+}
+
+/* Style for content paragraph to ensure proper alignment */
+#content {
+  white-space: pre-wrap; /* Preserve whitespace and line breaks */
+  word-wrap: break-word; /* Break long words to avoid overflow */
+  overflow-wrap: break-word; /* Ensure long words break correctly */
+  line-height: 1.5; /* Increase line height for readability */
+  color: #000000; /* Black text color */
+}
+
+/* Ensure the <hr> tag is styled appropriately */
+.right-box hr {
+  margin: 20px 0; /* Space above and below the horizontal rule */
+  border: 0;
+  border-top: 1px solid #cccccc; /* Light gray border for the rule */
 }

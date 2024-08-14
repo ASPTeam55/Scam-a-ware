@@ -3,22 +3,45 @@
 <head>
 	<title>MCQ Question</title>
     <link rel="stylesheet" href="../index/global.css">
-    <link rel="stylesheet" href="/page4/quiz.css">
+    <link rel="stylesheet" href="../page4/quiz.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
 </head>
 <body>
 	<div class="container">
-		<div class="left-box">
-			<h2 id="mcq"></h2>
-			<ul id="mcq-options"></ul>
-            <button id="submit-button">Submit</button>
+		<div class="innercontainer">
+			<div class="left-box">
+				<h2 id="mcq"></h2>
+				<ul id="mcq-options"></ul>
+				<button id="submit-button">Submit</button>
+			</div>
+			<div class="right-box">
+				<!-- Window controls for right-box -->
+				<div class="window-controls">
+					<button class="control-button close"></button>
+					<button class="control-button maximize"></button>
+					<button class="control-button minimize"></button>
+				</div>
+				<h3>Incoming Email</h3>
+				<div class="email-detail">
+					<strong>Sender:</strong>
+					<span id="sender-email"></span>
+				</div>
+				<div class="email-detail">
+					<strong>Recipient:</strong>
+					<span id="recipient-email"></span>
+				</div>
+				<div class="email-detail">
+					<strong>Subject:</strong>
+					<span id="subject"></span>
+				</div>
+				<hr>
+				<div class="email-content">
+					<p id="content"></p>
+				</div>
+			</div>
 		</div>
-		<div class="right-box">
-			<p><strong>Sender:&nbsp;</strong> <span id="sender-email"></span></p>
-			<p><strong>Recipient:&nbsp;</strong> <span id="recipient-email"></span></p>
-			<p><strong>Subject:&nbsp;</strong> <span id="subject"></span></p>
-			<p><span id="content"></span></p>
-		</div>
-	</div>
-    <script src="quiz.js"></script>
+	</div> 
+	<div class="grid"></div>
+    <script src="../page4/quiz.js"></script>
 </body>
 </html>
