@@ -4,6 +4,16 @@ import { bots } from '../page2/bot.js'; // Adjust path as needed
 const audio = new Audio('../assets/button.mp3');
 audio.preload = 'auto';
 
+//image stuff
+let currentIndex = 0;
+const images = [
+  '../assets/qn1.png', //images
+  '../assets/qn2.jpg',
+];
+const imageContainer = document.querySelector('.image-container');
+const leftButton = document.getElementById('leftButton');
+const rightButton = document.getElementById('rightButton');
+
 // Function to play the sound and handle redirection
 function playClickSoundAndRedirect() {
     console.log('Playing click sound...'); // Log when sound starts playing
@@ -55,3 +65,31 @@ document.addEventListener('DOMContentLoaded', () => {
         botImage.style.display = 'none'; // Hide the bot image if the selection is invalid
     }
 });
+
+//image stuff
+
+loadImage();
+
+leftButton.addEventListener('click', () => {
+    currentIndex--;
+    if (currentIndex < 0) {
+    currentIndex = images.length - 1; // Go to last image
+    }
+    loadImage();
+});
+
+rightButton.addEventListener('click', () => {
+    currentIndex++;
+    if (currentIndex >= images.length) {
+    currentIndex = 0; // Reset to first image
+    }
+    loadImage();
+});
+
+function loadImage() {
+  const img = document.createElement('img');
+  img.src = images[currentIndex];
+  img.alt = `Tutorial Screenshot ${currentIndex + 1}`;
+  imageContainer.innerHTML = ''; // Clear previous image
+  imageContainer.appendChild(img);
+}

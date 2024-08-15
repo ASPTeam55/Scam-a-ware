@@ -7,6 +7,12 @@ const mode = {
   TEXTSELECT: 1
 };
 
+const audio = new Audio('../assets/button.mp3');
+audio.preload = 'auto';
+const mcqListener = () => soundAnd(loadNextQuestion);
+const highlightListner = () => soundAnd(highlight);
+const submitListner = () => soundAnd(submit);
+
 fetch('quiz.json')
   .then(response => response.json())
   .then(jsonData => {
@@ -46,7 +52,7 @@ function load_mcq(){
   });
 
   document.getElementById('submit-button').innerHTML = 'Submit';
-  document.getElementById('submit-button').addEventListener('click', submit);
+  document.getElementById('submit-button').addEventListener('click', submitListner);
 } 
 
 function highlight(){
@@ -80,8 +86,8 @@ function highlight(){
 
   document.getElementById('submit-button').innerHTML = 'submit';
   document.getElementById('submit-button').style.display = 'none';
-  document.getElementById('submit-button').removeEventListener('click', highlight);
-  document.getElementById('submit-button').addEventListener('click', submit);
+  document.getElementById('submit-button').removeEventListener('click', highlightListner);
+  document.getElementById('submit-button').addEventListener('click', submitListner);
   
 }
 
@@ -112,9 +118,9 @@ function submit() {
     selectedOptionElement.innerHTML = `${selectedTooltip}`;
     optionsContainer.appendChild(selectedOptionElement);
 
-    document.getElementById('submit-button').innerHTML = 'Next';
-    document.getElementById('submit-button').removeEventListener('click', submit);
-    document.getElementById('submit-button').addEventListener('click', highlight);
+    document.getElementById('submit-button').innerHTML = 'next';
+    document.getElementById('submit-button').removeEventListener('click', submitListner);
+    document.getElementById('submit-button').addEventListener('click', highlightListner);
   } 
   // In text select mode
   else if(game_mode === mode.TEXTSELECT){
@@ -145,8 +151,8 @@ function submit() {
     }
 
     document.getElementById('submit-button').innerHTML = 'next';
-    document.getElementById('submit-button').removeEventListener('click', submit);
-    document.getElementById('submit-button').addEventListener('click', loadNextQuestion);
+    document.getElementById('submit-button').removeEventListener('click', submitListner);
+    document.getElementById('submit-button').addEventListener('click', mcqListener);
   }
 
   game_mode = (game_mode + 1) % 2;
@@ -158,8 +164,8 @@ function loadNextQuestion() {
     load_email();
     load_mcq();
     document.getElementById('submit-button').innerHTML = 'Submit';
-    document.getElementById('submit-button').removeEventListener('click', loadNextQuestion);
-    document.getElementById('submit-button').addEventListener('click', submit);
+    document.getElementById('submit-button').removeEventListener('click', mcqListener);
+    document.getElementById('submit-button').addEventListener('click', submitListner);
   } else {
     localStorage.setItem('score', score);
     window.location.href = '../page5/results.html';  // Adjust the path if necessary
@@ -176,4 +182,20 @@ function toggleHighlight(sentenceElement, answerCount) {
   } else {
     submitBtn.style.display = 'none';
   }
+}
+
+function soundAnd(whatNext) {
+  console.log('Playing click sound...'); // Log when sound starts playing
+  audio.currentTime = 0; // Rewind to the start
+  audio.play().then(() => {
+      console.log('Sound played successfully');
+      // Delay page redirection to ensure sound can be heard
+      setTimeout(() => {
+        console.log(`calling ${whatNext.name}`);
+        whatNext();
+      }, 500); // Adjust delay as needed
+  }).catch(error => {
+      console.error('Error playing sound:', error);
+      whatNext();
+  });
 }
