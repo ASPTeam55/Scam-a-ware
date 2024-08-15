@@ -29,6 +29,10 @@ function load_email(){
     const recipient_email = question.recipient_email.replaceAll("{username}", sessionStorage.getItem('username'));
     const email_content = question.content.replaceAll('{username}', sessionStorage.getItem('username'));
 
+    document.getElementById('sender-email').classList.remove('highlighted-correct', 'highlighted-wrong', 'highlighted-miss');
+    document.getElementById('recipient-email').classList.remove('highlighted-correct', 'highlighted-wrong', 'highlighted-miss');
+    document.getElementById('subject').classList.remove('highlighted-correct', 'highlighted-wrong', 'highlighted-miss');
+    
     document.getElementById('sender-email').innerHTML = question.sender_email;
     document.getElementById('recipient-email').innerHTML = recipient_email;
     document.getElementById('subject').innerHTML = question.subject;
@@ -68,9 +72,9 @@ function highlight(){
   const recipient_email = document.getElementById('recipient-email');
   const subject = document.getElementById('subject');
 
-  sender_email.className = 'oneSentence';
-  recipient_email.className = 'oneSentence';
-  subject.className = 'oneSentence';
+  sender_email.classList.add('oneSentence');
+  recipient_email.classList.add('oneSentence');
+  subject.classList.add('oneSentence');
   sender_email.onclick = () => toggleHighlight(sender_email, answerCount);
   recipient_email.onclick = () => toggleHighlight(recipient_email, answerCount);
   subject.onclick = () => toggleHighlight(subject, answerCount);
