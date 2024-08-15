@@ -34,8 +34,8 @@
 /* Window controls container for right-box */
 .right-box .window-controls {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 1%;
+  right: 1%;
   display: flex;
   gap: 5px; /* Space between buttons */
 }
