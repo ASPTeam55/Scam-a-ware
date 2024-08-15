@@ -7,8 +7,8 @@ audio.preload = 'auto';
 //image stuff
 let currentIndex = 0;
 const images = [
-  '../assets/qn1.png', //images
-  '../assets/qn2.jpg',
+  {img: '../assets/qn1.png',tooltip: "umm sample tooltip 1"},//images
+  {img: '../assets/qn2.jpg', tooltip: "umm sample tooltip 2"}
 ];
 const imageContainer = document.querySelector('.image-container');
 const leftButton = document.getElementById('leftButton');
@@ -87,9 +87,18 @@ rightButton.addEventListener('click', () => {
 });
 
 function loadImage() {
-  const img = document.createElement('img');
-  img.src = images[currentIndex];
-  img.alt = `Tutorial Screenshot ${currentIndex + 1}`;
-  imageContainer.innerHTML = ''; // Clear previous image
-  imageContainer.appendChild(img);
-}
+    // Clear previous image and tooltip
+    imageContainer.innerHTML = '';
+    document.getElementById('tooltip').textContent = '';
+  
+    // Create new image element
+    const img = document.createElement('img');
+    img.src = images[currentIndex].img;
+    img.alt = `Tutorial Screenshot ${currentIndex + 1}`;
+  
+    // Append new image
+    imageContainer.appendChild(img);
+  
+    // Update tooltip
+    document.getElementById('tooltip').textContent = images[currentIndex].tooltip;
+  }
