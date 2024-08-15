@@ -4,14 +4,14 @@ let score = 0;
 let game_mode = 0;
 const mode = {
   MCQ: 0,
-  TEXTSELECT: 1
+  TEXT_SELECT: 1
 };
 
 const audio = new Audio('../assets/button.mp3');
 audio.preload = 'auto';
 const mcqListener = () => soundAnd(loadNextQuestion);
-const highlightListner = () => soundAnd(highlight);
-const submitListner = () => soundAnd(submit);
+const highlightListener = () => soundAnd(highlight);
+const submitListener = () => soundAnd(submit);
 
 let textHighlightEnable = false;
 
@@ -68,7 +68,7 @@ function load_mcq(){
   });
 
   document.getElementById('submit-button').innerHTML = 'Submit';
-  document.getElementById('submit-button').addEventListener('click', submitListner);
+  document.getElementById('submit-button').addEventListener('click', submitListener);
 } 
 
 function highlight(){
@@ -116,13 +116,15 @@ function highlight(){
 
   document.getElementById('submit-button').innerHTML = 'submit';
   document.getElementById('submit-button').style.display = 'none';
-  document.getElementById('submit-button').removeEventListener('click', highlightListner);
-  document.getElementById('submit-button').addEventListener('click', submitListner);
+  document.getElementById('submit-button').removeEventListener('click', highlightListener);
+  document.getElementById('submit-button').addEventListener('click', submitListener);
   
+  textHighlightEnable = true;
 }
 
 function submit() {
   question = data.question[question_index];
+  console.log(game_mode);
 
   // In MCQ mode
   if(game_mode === mode.MCQ) {
@@ -149,8 +151,8 @@ function submit() {
     optionsContainer.appendChild(selectedOptionElement);
 
     document.getElementById('submit-button').innerHTML = 'Next';
-    document.getElementById('submit-button').removeEventListener('click', submitListner);
-    document.getElementById('submit-button').addEventListener('click', highlightListner);
+    document.getElementById('submit-button').removeEventListener('click', submitListener);
+    document.getElementById('submit-button').addEventListener('click', highlightListener);
   } 
   // In text select mode
   else if(game_mode === mode.TEXT_SELECT){
@@ -227,7 +229,7 @@ function submit() {
     }
 
     document.getElementById('submit-button').innerHTML = 'next';
-    document.getElementById('submit-button').removeEventListener('click', submitListner);
+    document.getElementById('submit-button').removeEventListener('click', submitListener);
     document.getElementById('submit-button').addEventListener('click', mcqListener);
 
     textHighlightEnable = false;
@@ -243,7 +245,7 @@ function loadNextQuestion() {
     load_mcq();
     document.getElementById('submit-button').innerHTML = 'Submit';
     document.getElementById('submit-button').removeEventListener('click', mcqListener);
-    document.getElementById('submit-button').addEventListener('click', submitListner);
+    document.getElementById('submit-button').addEventListener('click', submitListener);
   } else {
     localStorage.setItem('score', score);
     window.location.href = '../page5/results.html';  // Adjust the path if necessary
