@@ -17,6 +17,7 @@
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Enhanced shadow for more depth */
   color: #000000; /* Black text color */
   line-height: 1; /* Increase line height for more spacing between lines */
+  overflow: auto;
 }
 
 /* Additional spacing between list items */
