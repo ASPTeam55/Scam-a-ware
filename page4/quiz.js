@@ -173,6 +173,7 @@ function submit() {
         sentence.classList.add('highlighted-correct');
       } else {
         const answerSentenceIndex = sentencesText.findIndex(text => text === answer);
+        console.log(answerSentenceIndex);
         const answerSentence = sentences[answerSentenceIndex];
         answerSentence.classList.add('highlighted-miss');
 
