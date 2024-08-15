@@ -2,6 +2,7 @@ let data;
 let question_index = 0;
 let score = 0;
 let game_mode = 0;
+let textHighlightEnable = false;
 const mode = {
   MCQ: 0,
   TEXT_SELECT: 1
@@ -89,6 +90,7 @@ function highlight(){
   document.getElementById('submit-button').removeEventListener('click', highlight);
   document.getElementById('submit-button').addEventListener('click', submit);
   
+  textHighlightEnable = true;
 }
 
 function submit() {
@@ -194,6 +196,8 @@ function submit() {
     document.getElementById('submit-button').innerHTML = 'next';
     document.getElementById('submit-button').removeEventListener('click', submit);
     document.getElementById('submit-button').addEventListener('click', loadNextQuestion);
+
+    textHighlightEnable = false;
   }
 
   game_mode = (game_mode + 1) % 2;
@@ -214,19 +218,21 @@ function loadNextQuestion() {
 }
 
 function toggleHighlight(sentenceElement, answerCount) {
-  // Add/remove highlight
-  sentenceElement.classList.toggle('highlighted');
+  if(textHighlightEnable){
+    // Add/remove highlight
+    sentenceElement.classList.toggle('highlighted');
 
-  // Display/hide the submit button
-  const highlightCount = document.querySelectorAll('.highlighted').length;
-  const submitBtn = document.getElementById('submit-button');
-  if(highlightCount === answerCount){
-    submitBtn.style.display = 'block';
-  } else {
-    submitBtn.style.display = 'none';
+    // Display/hide the submit button
+    const highlightCount = document.querySelectorAll('.highlighted').length;
+    const submitBtn = document.getElementById('submit-button');
+    if(highlightCount === answerCount){
+      submitBtn.style.display = 'block';
+    } else {
+      submitBtn.style.display = 'none';
+    }
+
+    // Display highlight counter
+    const optionsContainer = document.getElementById('mcq-options');
+    optionsContainer.innerHTML = `Answer select: ${highlightCount}/${answerCount}`;
   }
-
-  // Display highlight counter
-  const optionsContainer = document.getElementById('mcq-options');
-  optionsContainer.innerHTML = `Answer select: ${highlightCount}/${answerCount}`;
 }
