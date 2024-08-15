@@ -15,6 +15,12 @@ fetch('quiz.json')
   
     load_email();
     load_mcq();
+
+    return jsonData;
+  })
+  .then(questionData => {
+    const maxScore = questionData.question.length * 2;
+    localStorage.setItem('maxScore', maxScore);
   });
 
 function load_email(){
@@ -142,8 +148,6 @@ function submit() {
       highlightSentencesText.push(sentence.innerHTML);
     });
 
-    console.log(highlightSentencesText);
-
     correctAnswers.forEach(answer => {
       // adjust the correct answer for dynamic username & email
       answer += ". ";
@@ -159,6 +163,8 @@ function submit() {
         const answerSentenceIndex = sentencesText.findIndex(text => text === answer);
         const answerSentence = sentences[answerSentenceIndex];
         answerSentence.classList.add('highlighted-miss');
+
+        allCorrect = false;
       }
     });
 
@@ -172,6 +178,8 @@ function submit() {
       } else {
         sentence.classList.remove('highlighted');
         sentence.classList.add('highlighted-wrong');
+
+        allCorrect = false;
       }
     });
 
@@ -181,6 +189,7 @@ function submit() {
     }
 
     if(allCorrect){
+      console.log("correct");
       score++;
       document.getElementById('mcq').innerHTML = '<em>Correct</em>';
     } else {
