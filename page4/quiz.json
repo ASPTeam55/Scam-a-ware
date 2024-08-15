@@ -4,6 +4,7 @@
       "sender_email": "Ms Marcus Oliver (at@minhvi.gob.ve)",
       "recipient_email": "{username}@customer.com",
       "subject": "Foundation Grant",
+      "attachments": ["hahaha.word", "latata.word"],
       "content": "Google Foundation is using this Grant to reach out to the world (Less privilege) with your help and corporation. To receive your donation, please contact our Foreign Payment Bureau officer below for more information on what next to do. \n\nThe Attached document to this mail is in Microsoft Word Document format. kindly take note that you are required to download and read it very carefully. Do follow the guided instructions. Kindly contact George Hanson (info@adminofficeprocess.com). \n\nNOTE: If you received this message in your Junk/Spam folder, that is because of the restrictions implemented by your Internet Service Provider, we urge you to treat it genuinely. \n\nYours in service,\n\nMs Marcus Oliver\nDirector of Accessibility\nPowered by Google ",
       "mcq": "Is this a phishing email?",
       "mcq_options": [
@@ -38,6 +39,7 @@
       "sender_email": "alert@bankingcorp.com",
       "recipient_email": "{username}@customer.com",
       "subject": "Urgent: Account Suspension",
+      "attachments": [],
       "content": "Dear {username}, your account will be suspended due to suspicious activity. Click here to verify your account: http://phishingsite.com/Verify Now",
       "mcq": "What indicates this email might be phishing?",
       "mcq_options": [
@@ -71,6 +73,7 @@
       "sender_email": "alert@bankingcorp.com",
       "recipient_email": "{username}@customer.com",
       "subject": "Urgent: Account Suspension",
+      "attachments": [],
       "content": "Dear {username}, your account will be suspended due to suspicious activity. Click here to verify your account: http://phishingsite.com/Verify Now",
       "mcq": "What indicates this email might be phishing?",
       "mcq_options": [
@@ -104,6 +107,7 @@
       "sender_email": "alert@bankingcorp.com",
       "recipient_email": "{username}@customer.com",
       "subject": "Urgent: Account Suspension",
+      "attachments": [],
       "content": "Dear {username}, your account will be suspended due to suspicious activity. Click here to verify your account: http://phishingsite.com/Verify Now",
       "mcq": "What indicates this email might be phishing?",
       "mcq_options": [
@@ -137,6 +141,7 @@
       "sender_email": "support@securelogin.com",
       "recipient_email": "{username}@user.com",
       "subject": "Security Update: Download Now",
+      "attachments": [],
       "content": "Dear {username}, download our latest security update: http://malwaresite.com/Download Now. Thank you",
       "mcq": "What raises suspicion about this email?",
       "mcq_options": [

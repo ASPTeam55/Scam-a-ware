@@ -44,6 +44,26 @@ function load_email(){
     document.getElementById('recipient-email').innerHTML = recipient_email;
     document.getElementById('subject').innerHTML = question.subject;
     document.getElementById('content').innerHTML = email_content;
+
+    attachments = question['attachments'];
+    if(attachments.length === 0){
+      document.getElementById('attachment-block').style.display = 'none';
+    } else {
+      console.log("show block");
+      document.getElementById('attachment-block').style.display = 'block';
+
+      const attachmentsContainer = document.getElementById('attachments')
+      while (attachmentsContainer.firstChild) {
+        attachmentsContainer.removeChild(attachmentsContainer.firstChild);
+      }
+      attachments.forEach(attachment => {
+        const oneAttachment = document.createElement('span');
+        oneAttachment.classList.add('oneAttachment');
+        oneAttachment.innerHTML = attachment;
+
+        attachmentsContainer.appendChild(oneAttachment);
+      });
+    }
 }
 
 function load_mcq(){

@@ -176,3 +176,11 @@
 .span{
   text-align:left;
 }
+
+.oneAttachment {
+  background-color:burlywood;
+  border-radius: 20px;
+  padding: 7px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
