@@ -62,6 +62,15 @@ function load_mcq(){
 
 function highlight(){
   question = data.question[question_index];
+  const answerCount = question["answers"].length; // Number of correct answers
+
+  const sender_email = document.getElementById('sender-email');
+  const recipient_email = document.getElementById('recipient-email');
+  const subject = document.getElementById('subject');
+
+  sender_email.onclick = () => toggleHighlight(sender_email, answerCount);
+  recipient_email.onclick = () => toggleHighlight(recipient_email, answerCount);
+  subject.onclick = () => toggleHighlight(subject, answerCount);
 
   document.getElementById('mcq').innerHTML = 'Highlight all the suspicious aspects of the email';
 
@@ -71,7 +80,6 @@ function highlight(){
   }
 
   // Display highlight counter
-  const answerCount = question["answers"].length; // Number of correct answers
   optionsContainer.innerHTML = `Answer select: 0/${answerCount}`;
 
   const contentElement = document.getElementById('content');
