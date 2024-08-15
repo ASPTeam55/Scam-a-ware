@@ -38,3 +38,10 @@
   padding: 2px; /* Add padding around highlighted text */
   border-radius: 5px; /* Rounded corners */
 }
+
+.highlighted-miss {
+  color: red;
+  background-color: orange; /* Highlight wrong color */
+  padding: 2px; /* Add padding around highlighted text */
+  border-radius: 5px; /* Rounded corners */
+}

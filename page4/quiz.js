@@ -4,7 +4,7 @@ let score = 0;
 let game_mode = 0;
 const mode = {
   MCQ: 0,
-  TEXTSELECT: 1
+  TEXT_SELECT: 1
 };
 
 fetch('quiz.json')
@@ -76,7 +76,6 @@ function highlight(){
   // Display sentences
   sentences.forEach((sentence, index) => {
     sentence = sentence.replaceAll('{username}', sessionStorage.getItem('username'));
-    console.log(sentence);
     const sentenceElement = document.createElement('span');
     sentenceElement.className = 'oneSentence';
     sentenceElement.dataset.index = index;
@@ -124,31 +123,55 @@ function submit() {
     document.getElementById('submit-button').addEventListener('click', highlight);
   } 
   // In text select mode
-  else if(game_mode === mode.TEXTSELECT){
-    const correct_answers = question.answers;
-    const highlight_sentences = document.querySelectorAll('.highlighted');
+  else if(game_mode === mode.TEXT_SELECT){
+    const correctAnswers = question.answers;
     let allCorrect = true; // if all highlighted sentences are correct answers
 
-    correct_answers.forEach(answer => {
-      
+    const sentences = document.querySelectorAll('.oneSentence');
+    const highlightSentences = document.querySelectorAll('.highlighted');
+    let sentencesText = [];
+    let highlightSentencesText = [];
+
+    sentences.forEach(sentence => {
+      sentencesText.push(sentence.innerHTML);
     });
 
-    // highlight_sentences.forEach(sentence => {
-    //   // Remove the normal highlight
-    //   sentence.classList.remove('highlighted');
+    highlightSentences.forEach(sentence => {
+      highlightSentencesText.push(sentence.innerHTML);
+    });
 
-    //   // Extract and trim the content of the sentence
-    //   const sentence_content = sentence.innerHTML.replace(". ", "");
+    console.log(highlightSentencesText);
 
-    //   // Display correct/wrong highlight
-    //   const isCorrect = question.answers.includes(sentence_content);
-    //   if(isCorrect){
-    //     sentence.classList.add('highlighted-correct');
-    //   } else {
-    //     sentence.classList.add('highlighted-wrong');
-    //     allCorrect = false;
-    //   }
-    // });
+    correctAnswers.forEach(answer => {
+      // adjust the correct answer for dynamic username & email
+      answer += ". ";
+      answer = answer.replaceAll('{username}', sessionStorage.getItem('username'));
+
+      const answerIndexInHighlight = highlightSentencesText.findIndex(text => text === answer);
+      const answerSelected = (answerIndexInHighlight == -1)? false:true;
+      if(answerSelected){
+        const sentence = highlightSentences[answerIndexInHighlight];
+        sentence.classList.remove('highlighted');
+        sentence.classList.add('highlighted-correct');
+      } else {
+        const answerSentenceIndex = sentencesText.findIndex(text => text === answer);
+        const answerSentence = sentences[answerSentenceIndex];
+        answerSentence.classList.add('highlighted-miss');
+      }
+    });
+
+    highlightSentences.forEach(sentence => {
+      let sentenceText = sentence.innerHTML;
+      sentenceText = sentenceText.replaceAll(sessionStorage.getItem('username'), '{username}');
+      sentenceText = sentenceText.replace('. ', '');
+
+      if(correctAnswers.includes(sentenceText)){
+        return;
+      } else {
+        sentence.classList.remove('highlighted');
+        sentence.classList.add('highlighted-wrong');
+      }
+    });
 
     const optionsContainer = document.getElementById('mcq-options');
     while (optionsContainer.firstChild) {
