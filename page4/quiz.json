@@ -1,6 +1,106 @@
 {
   "question": [
     {
+      "sender_email": "Ms Marcus Oliver (at@minhvi.gob.ve)",
+      "recipient_email": "{username}@customer.com",
+      "subject": "Foundation Grant",
+      "content": "Google Foundation is using this Grant to reach out to the world (Less privilege) with your help and corporation.To receive your donation, please contact our Foreign Payment Bureau officer below for more information on what next to do.\n\nThe Attached document to this mail is in Microsoft Word Document format. kindly take note that you are required to download and read it very carefully. Do follow the guided instructions. Kindly contact George Hanson (info@adminofficeprocess.com).\n\nNOTE: If you received this message in your Junk/Spam folder, that is because of the restrictions implemented by your Internet Service Provider, we urge you to treat it genuinely. \n\nYours in service,\n\nMs Marcus Oliver\nDirector of Accessibility\nPowered by Google ",
+      "mcq": "Is this a phishing email?",
+      "mcq_options": [
+        {
+          "option": "Saying 'we urge you to treat it genuinely', makes it seem like not a phishing email",
+          "correct": false,
+          "tooltip": "This is a strong indicator of phishing, as urgent requests can create a false sense of urgency."
+        },
+        {
+          "option": "info@adminofficeprocess.com looks like it came from google",
+          "correct": false,
+          "tooltip": "This doesn't necessarily indicate phishing, as sender emails can be easily spoofed."
+        },
+        {
+          "option": "The sender email does not match the content of the email itself about Google Foundation",
+          "correct": true,
+          "tooltip": "Personalized greetings don't guarantee legitimacy, as phishers can use publicly available information."
+        },
+        {
+          "option": "This email looks legitimate",
+          "correct": false,
+          "tooltip": "Security-related subjects can be used by phishers to create a sense of urgency."
+        }
+      ],
+      "answers": [
+        "kindly take note that you are required to download and read it very carefully. Do follow the guided instructions.",
+        "If you received this message in your Junk/Spam folder, that is because of the restrictions implemented by your Internet Service Provider, we urge you to treat it genuinely.",
+        "Ms Marcus Oliver (at@minhvi.gob.ve)"
+      ]
+    },
+    {
+      "sender_email": "alert@bankingcorp.com",
+      "recipient_email": "{username}@customer.com",
+      "subject": "Urgent: Account Suspension",
+      "content": "Dear {username}, your account will be suspended due to suspicious activity. Click here to verify your account: http://phishingsite.com/Verify Now",
+      "mcq": "What indicates this email might be phishing?",
+      "mcq_options": [
+        {
+          "option": "Urgent subject line and request for action",
+          "correct": true,
+          "tooltip": "This is a strong indicator of phishing, as urgent requests can create a false sense of urgency."
+        },
+        {
+          "option": "Official-looking sender email",
+          "correct": false,
+          "tooltip": "This doesn't necessarily indicate phishing, as sender emails can be easily spoofed."
+        },
+        {
+          "option": "Personalized greeting",
+          "correct": false,
+          "tooltip": "Personalized greetings don't guarantee legitimacy, as phishers can use publicly available information."
+        },
+        {
+          "option": "Security-related subject",
+          "correct": false,
+          "tooltip": "Security-related subjects can be used by phishers to create a sense of urgency."
+        }
+      ],
+      "answers": [
+        "Click here to verify your account: http://phishingsite.com/Verify Now",
+        "Dear {username}, your account will be suspended due to suspicious activity"
+      ]
+    },
+    {
+      "sender_email": "alert@bankingcorp.com",
+      "recipient_email": "{username}@customer.com",
+      "subject": "Urgent: Account Suspension",
+      "content": "Dear {username}, your account will be suspended due to suspicious activity. Click here to verify your account: http://phishingsite.com/Verify Now",
+      "mcq": "What indicates this email might be phishing?",
+      "mcq_options": [
+        {
+          "option": "Urgent subject line and request for action",
+          "correct": true,
+          "tooltip": "This is a strong indicator of phishing, as urgent requests can create a false sense of urgency."
+        },
+        {
+          "option": "Official-looking sender email",
+          "correct": false,
+          "tooltip": "This doesn't necessarily indicate phishing, as sender emails can be easily spoofed."
+        },
+        {
+          "option": "Personalized greeting",
+          "correct": false,
+          "tooltip": "Personalized greetings don't guarantee legitimacy, as phishers can use publicly available information."
+        },
+        {
+          "option": "Security-related subject",
+          "correct": false,
+          "tooltip": "Security-related subjects can be used by phishers to create a sense of urgency."
+        }
+      ],
+      "answers": [
+        "Click here to verify your account: http://phishingsite.com/Verify Now",
+        "Dear {username}, your account will be suspended due to suspicious activity"
+      ]
+    },
+    {
       "sender_email": "alert@bankingcorp.com",
       "recipient_email": "{username}@customer.com",
       "subject": "Urgent: Account Suspension",
