@@ -105,7 +105,7 @@
   white-space: pre-wrap; /* Preserve whitespace and line breaks */
   word-wrap: break-word; /* Break long words to avoid overflow */
   overflow-wrap: break-word; /* Ensure long words break correctly */
-  line-height: 1.5; /* Increase line height for readability */
+  line-height: 1; /* Increase line height for readability */
   color: #000000; /* Black text color */
 }
 
