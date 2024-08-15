@@ -172,3 +172,7 @@
   background-color: orange; /* Highlight wrong color */
   border-radius: 5px; /* Rounded corners */
 }
+
+.span{
+  text-align:left;
+}

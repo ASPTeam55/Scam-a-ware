@@ -149,8 +149,8 @@ function submit() {
     optionsContainer.appendChild(selectedOptionElement);
 
     document.getElementById('submit-button').innerHTML = 'Next';
-    document.getElementById('submit-button').removeEventListener('click', submit);
-    document.getElementById('submit-button').addEventListener('click', highlight);
+    document.getElementById('submit-button').removeEventListener('click', submitListner);
+    document.getElementById('submit-button').addEventListener('click', highlightListner);
   } 
   // In text select mode
   else if(game_mode === mode.TEXT_SELECT){
@@ -227,8 +227,8 @@ function submit() {
     }
 
     document.getElementById('submit-button').innerHTML = 'next';
-    document.getElementById('submit-button').removeEventListener('click', submit);
-    document.getElementById('submit-button').addEventListener('click', loadNextQuestion);
+    document.getElementById('submit-button').removeEventListener('click', submitListner);
+    document.getElementById('submit-button').addEventListener('click', mcqListener);
 
     textHighlightEnable = false;
   }
@@ -242,8 +242,8 @@ function loadNextQuestion() {
     load_email();
     load_mcq();
     document.getElementById('submit-button').innerHTML = 'Submit';
-    document.getElementById('submit-button').removeEventListener('click', loadNextQuestion);
-    document.getElementById('submit-button').addEventListener('click', submit);
+    document.getElementById('submit-button').removeEventListener('click', mcqListener);
+    document.getElementById('submit-button').addEventListener('click', submitListner);
   } else {
     localStorage.setItem('score', score);
     window.location.href = '../page5/results.html';  // Adjust the path if necessary

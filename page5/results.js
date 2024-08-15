@@ -1,8 +1,10 @@
 const score = localStorage.getItem('score');
+const maxScore = localStorage.getItem('maxScore');
 const audio = new Audio('../assets/button.mp3');
 audio.preload = 'auto';
 
 document.getElementById('score').innerHTML = `You scored ${score} out of 10`;
+document.getElementById('score').innerHTML = `You scored ${score} out of ${maxScore}`;
 
 document.getElementById('main-menu').addEventListener('click', () => {
     playClickSoundAndMainMenu(); // Play sound and redirect
