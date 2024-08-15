@@ -3,6 +3,9 @@
   display: flex;
   flex-direction: row;
   gap: 20px; /* Increased space between boxes */
+  max-width: 100vw;
+  max-height: 100vh;
+  padding: 20px;
 }
 
 /* Left box styling */
@@ -25,6 +28,7 @@
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Enhanced shadow for more depth */
   color: #000000; /* Black text color */
   position: relative; /* To position window controls absolutely */
+  overflow: auto;
 }
 
 /* Window controls container for right-box */
