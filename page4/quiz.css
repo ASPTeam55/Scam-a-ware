@@ -129,3 +129,46 @@
   border: 0;
   border-top: 1px solid #cccccc; /* Light gray border for the rule */
 }
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.left-box {
+  width: 35%;
+  padding: 20px;
+  border: 1px solid #ccc; /* Added border */
+  text-align: left;
+}
+
+.right-box {
+  width: 65%;
+  padding: 20px;
+  border: 1px solid #ccc; /* Added border */
+  text-align: left;
+  p { display: flex; align-items: center; }
+}
+
+.highlighted {
+  color: black;
+  background-color: yellow; /* Highlight color */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.highlighted-correct {
+  color: black;
+  background-color: lime; /* Highlight wrong color */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.highlighted-wrong {
+  color: black;
+  background-color: red; /* Highlight wrong color */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.highlighted-miss {
+  color: red;
+  background-color: orange; /* Highlight wrong color */
+  border-radius: 5px; /* Rounded corners */
+}
