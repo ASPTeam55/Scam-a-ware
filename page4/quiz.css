@@ -42,8 +42,8 @@
 
 /* Style for individual window control buttons */
 .right-box .control-button {
-  width: 15px; /* Width of the buttons */
-  height: 15px; /* Height of the buttons */
+  width: 1%; /* Width of the buttons */
+  height: 1%; /* Height of the buttons */
   border-radius: 50%; /* Circular buttons */
   border: 1px solid #000000; /* Border for buttons */
   background-color: #ffffff; /* White background for visibility */
