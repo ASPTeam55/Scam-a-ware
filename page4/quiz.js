@@ -48,6 +48,7 @@ function load_mcq(){
   // Populate options one by one with radio buttons
   question.mcq_options.forEach((option, index) => {
       const optionElement = document.createElement('div');
+      option.option = option.option.replaceAll('{username}', sessionStorage.getItem('username'));
       optionElement.innerHTML = `
           <input type="radio" id="option-${index}" name="mcq-option" value="${option.option}">
           <label for="option-${index}">${option.option}</label>
@@ -106,7 +107,7 @@ function submit() {
   if(game_mode === mode.MCQ) {
     const selectedOption = document.querySelector('input[name="mcq-option"]:checked').value;
     const correctAnswer = question.mcq_options.find(option => option.correct).option;
-    const selectedTooltip = question.mcq_options.find(option => option.option === selectedOption).tooltip;
+    const selectedTooltip = question.mcq_options.find(option => option.option === selectedOption).tooltip.replaceAll('{username}', sessionStorage.getItem('username'));
 
     // Update MCQ text
     if (selectedOption === correctAnswer) {
@@ -196,6 +197,7 @@ function submit() {
       document.getElementById('mcq').innerHTML = '<em>Wrong</em>. Here are the correct answers: ';
 
       question.answers.forEach((answer, index) => {
+        answer = answer.replaceAll('{username}', sessionStorage.getItem('username'));
         const answerElement = document.createElement('div');
         answerElement.innerHTML = `${index + 1}. ${answer}`;
         document.getElementById('mcq-options').appendChild(answerElement);
