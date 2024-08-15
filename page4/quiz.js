@@ -68,6 +68,9 @@ function highlight(){
   const recipient_email = document.getElementById('recipient-email');
   const subject = document.getElementById('subject');
 
+  sender_email.className = 'oneSentence';
+  recipient_email.className = 'oneSentence';
+  subject.className = 'oneSentence';
   sender_email.onclick = () => toggleHighlight(sender_email, answerCount);
   recipient_email.onclick = () => toggleHighlight(recipient_email, answerCount);
   subject.onclick = () => toggleHighlight(subject, answerCount);
