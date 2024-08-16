@@ -49,7 +49,6 @@ function load_email(){
     if(attachments.length === 0){
       document.getElementById('attachment-block').style.display = 'none';
     } else {
-      console.log("show block");
       document.getElementById('attachment-block').style.display = 'block';
 
       const attachmentsContainer = document.getElementById('attachments')
@@ -144,8 +143,6 @@ function highlight(){
 
 function submit() {
   question = data.question[question_index];
-  console.log(game_mode);
-
   // In MCQ mode
   if(game_mode === mode.MCQ) {
     const selectedOption = document.querySelector('input[name="mcq-option"]:checked').value;
@@ -205,7 +202,6 @@ function submit() {
         sentence.classList.add('highlighted-correct');
       } else {
         const answerSentenceIndex = sentencesText.findIndex(text => text === answer);
-        console.log(answerSentenceIndex);
         const answerSentence = sentences[answerSentenceIndex];
         answerSentence.classList.add('highlighted-miss');
 
@@ -234,7 +230,6 @@ function submit() {
     }
 
     if(allCorrect){
-      console.log("correct");
       score++;
       document.getElementById('mcq').innerHTML = '<em>Correct</em>';
     } else {
