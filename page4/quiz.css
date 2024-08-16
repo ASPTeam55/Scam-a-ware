@@ -76,24 +76,27 @@
 
 /* Highlighted text styling */
 .highlighted {
-  color: #000000; /* Black text color for high contrast */
-  background-color: #ffff00; /* Classic yellow for highlighting */
-  padding: 4px 6px; /* Padding for better readability */
-  border-radius: 4px; /* Rounded corners for a retro feel */
+  color: black;
+  background-color: yellow; /* Highlight color */
+  border-radius: 5px; /* Rounded corners */
 }
 
 .highlighted-correct {
-  color: #000000; /* Black text color for high contrast */
-  background-color: #00ff00; /* Bright green for correct answers */
-  padding: 4px 6px; /* Consistent padding */
-  border-radius: 4px; /* Rounded corners */
+  color: black;
+  background-color: lime; /* Highlight wrong color */
+  border-radius: 5px; /* Rounded corners */
 }
 
 .highlighted-wrong {
-  color: #000000; /* Black text color for high contrast */
-  background-color: #ff0000; /* Bright red for wrong answers */
-  padding: 4px 6px; /* Consistent padding */
-  border-radius: 4px; /* Rounded corners */
+  color: black;
+  background-color: red; /* Highlight wrong color */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.highlighted-miss {
+  color: darkred;
+  background-color: orange; /* Highlight wrong color */
+  border-radius: 5px; /* Rounded corners */
 }
 
 /* Style for individual email details */
@@ -150,30 +153,6 @@
   p { display: flex; align-items: center; }
 }
 
-.highlighted {
-  color: black;
-  background-color: yellow; /* Highlight color */
-  border-radius: 5px; /* Rounded corners */
-}
-
-.highlighted-correct {
-  color: black;
-  background-color: lime; /* Highlight wrong color */
-  border-radius: 5px; /* Rounded corners */
-}
-
-.highlighted-wrong {
-  color: black;
-  background-color: red; /* Highlight wrong color */
-  border-radius: 5px; /* Rounded corners */
-}
-
-.highlighted-miss {
-  color: red;
-  background-color: orange; /* Highlight wrong color */
-  border-radius: 5px; /* Rounded corners */
-}
-
 .span{
   text-align:left;
 }
@@ -184,4 +163,8 @@
   padding: 7px;
   margin-left: 2px;
   margin-right: 2px;
+}
+
+.oneSentence:hover {
+  cursor: pointer;
 }
