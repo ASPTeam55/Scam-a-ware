@@ -5,7 +5,7 @@
       "recipient_email": "{username}@customer.com",
       "subject": "Foundation Grant",
       "attachments": ["hahaha.word", "latata.word"],
-      "content": "Google Foundation is using this Grant to reach out to the world (Less privilege) with your help and corporation. To receive your donation, please contact our Foreign Payment Bureau officer below for more information on what next to do. \n\nThe Attached document to this mail is in Microsoft Word Document format. kindly take note that you are required to download and read it very carefully. Do follow the guided instructions. Kindly contact George Hanson (info@adminofficeprocess.com). \n\nNOTE: If you received this message in your Junk/Spam folder, that is because of the restrictions implemented by your Internet Service Provider, we urge you to treat it genuinely. \n\nYours in service,\n\nMs Marcus Oliver\nDirector of Accessibility\nPowered by Google ",
+      "content": "Google Foundation is using this Grant to reach out to the world (Less privilege) with your help and corporation. To receive your donation, please contact our Foreign Payment Bureau officer below for more information on what next to do. \n\nThe Attached document to this mail is in Microsoft Word Document format. Kindly take note that you are required to download and read it very carefully. Do follow the guided instructions. Kindly contact George Hanson (info@adminofficeprocess.com). \n\nNOTE: If you received this message in your Junk/Spam folder, that is because of the restrictions implemented by your Internet Service Provider, we urge you to treat it genuinely. \n\nYours in service,\n\nMs Marcus Oliver\nDirector of Accessibility\nPowered by Google ",
       "mcq": "Is this a phishing email?",
       "mcq_options": [
         {
@@ -30,7 +30,7 @@
         }
       ],
       "answers": [
-        "kindly take note that you are required to download and read it very carefully",
+        "Kindly take note that you are required to download and read it very carefully",
         "Do follow the guided instructions",
         "\n\nNOTE: If you received this message in your Junk/Spam folder, that is because of the restrictions implemented by your Internet Service Provider, we urge you to treat it genuinely"
       ]
