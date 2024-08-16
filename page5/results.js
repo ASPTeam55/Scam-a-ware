@@ -50,3 +50,32 @@ function playClickSoundAndRedirect() {
         window.location.href = '../page4/quiz.html';  // Redirect to quiz page
     });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const container = document.querySelector('.confetti-container');
+    const numConfetti = 100; // Number of confetti pieces
+
+    function createConfetti() {
+        for (let i = 0; i < numConfetti; i++) {
+            const confetti = document.createElement('div');
+            confetti.classList.add('confetti');
+            confetti.style.left = `${Math.random() * 100}vw`;
+            confetti.style.top = `${Math.random() * 100}vh`;
+            confetti.style.animationDuration = `${Math.random() * 2 + 2}s`;
+            confetti.style.animationDelay = `${Math.random() * 2}s`;
+            confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+            container.appendChild(confetti);
+        }
+    }
+
+    function showConfetti() {
+        container.style.display = 'block'; // Show the container
+        createConfetti();
+        setTimeout(() => {
+            container.style.display = 'none'; // Hide the container after animation
+            container.innerHTML = ''; // Clear confetti elements
+        }, 4000); // Duration longer than animation
+    }
+
+    showConfetti(); // Trigger confetti animation
+});

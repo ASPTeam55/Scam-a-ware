@@ -1,12 +1,73 @@
 .button {
-	background-color: #4CAF50;
-	color: #fff;
-	padding: 10px 20px;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
+    background-color: #4CAF50; /* Green button */
+    color: #fff;
+    padding: 12px 24px;
+    border: 2px solid #ffffff; /* White border for a retro feel */
+    border-radius: 0; /* Remove rounded corners for a more retro look */
+    font-family: 'Press Start 2P', cursive; /* Retro font */
+    text-transform: uppercase; /* All caps for a vintage style */
+    cursor: pointer;
+    box-shadow: 2px 2px 0px #000; /* Retro shadow effect */
+    transition: box-shadow 0.2s, transform 0.2s;
+    margin: 10px 0;
 }
 
 .button:hover {
-	background-color: #3e8e41;
+    background-color: #3e8e41; /* Darker green on hover */
+    box-shadow: 4px 4px 0px #000; /* Enhanced shadow on hover for depth */
+    transform: translate(-2px, -2px); /* Move up-left slightly on hover */
+}
+
+@keyframes confettiFall {
+    0% {
+        transform: translateY(-100vh) rotate(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ff0;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 9;
+    transform: rotate(45deg);
+    animation: confettiFall 2s ease-out;
+}
+
+.confetti:nth-child(1) {
+    background-color: #ff0;
+}
+.confetti:nth-child(2) {
+    background-color: #0f0;
+}
+.confetti:nth-child(3) {
+    background-color: #f00;
+}
+.confetti:nth-child(4) {
+    background-color: #00f;
+}
+.confetti:nth-child(5) {
+    background-color: #f0f;
+}
+
+.confetti-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 9;
+    display: none; /* Initially hidden */
 }
