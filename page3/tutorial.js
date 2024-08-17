@@ -7,8 +7,8 @@ audio.preload = 'auto';
 //image stuff
 let currentIndex = 0;
 const images = [
-  {img: '../assets/qn1.png',tooltip: "umm sample tooltip 1"},//images
-  {img: '../assets/qn2.jpg', tooltip: "umm sample tooltip 2"}
+  {img: '../assets/tp.png'},//images
+  {img: '../assets/tp1.png'}
 ];
 const imageContainer = document.querySelector('.image-container');
 const leftButton = document.getElementById('leftButton');
