@@ -105,7 +105,7 @@ function highlight(){
   recipient_email.onclick = () => toggleHighlight(recipient_email, answerCount);
   subject.onclick = () => toggleHighlight(subject, answerCount);
 
-  document.getElementById('mcq').innerHTML = 'Highlight all the suspicious aspects of the email';
+  document.getElementById('mcq').innerHTML = 'Select all the suspicious aspects in the email';
 
   const optionsContainer = document.getElementById('mcq-options');
   while (optionsContainer.firstChild) {
