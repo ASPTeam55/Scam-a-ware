@@ -56,7 +56,7 @@ body {
 /* Style the game title */
 h1 {
   font-size: 4em; /* Larger font size for the retro title */
-  color: #ff00ff; /* Neon pink color for the title */
+  color: #00ff00; /* Neon green color for the title */
   margin-bottom: 20px;
   text-shadow: 2px 2px 0 #000; /* Shadow effect for better readability */
   }

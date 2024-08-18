@@ -1,5 +1,5 @@
 .button {
-    background-color: #4CAF50; /* Green button */
+    background-color: #ff00ff; /* Purple button */
     color: #fff;
     padding: 12px 24px;
     border: 2px solid #ffffff; /* White border for a retro feel */
@@ -13,7 +13,7 @@
 }
 
 .button:hover {
-    background-color: #3e8e41; /* Darker green on hover */
+    background-color: #00ff00; /* Neon green on hover */
     box-shadow: 4px 4px 0px #000; /* Enhanced shadow on hover for depth */
     transform: translate(-2px, -2px); /* Move up-left slightly on hover */
 }
