@@ -40,7 +40,7 @@
       "recipient_email": "{username}@customer.com",
       "subject": "Immediate Action Required: Your Shipment Awaits Collection!",
       "attachments": [],
-      "content": "Hello {usernames}, \n\nYour DHL Express shipment with waybill number 5269754021 from Amazon is scheduled for delivery TODAY We will require a signature adelivery. \n\nIf you want to collect from a DHL Service Point, or select another delivery option, click here. \n\nTo complete the delivery as soon as possible, Please confirm the payment of (2.99SGD). \n\nKindly collect your shipment, otherwise or we will return it to the sender.",
+      "content": "Hello {usernames}, \n\nYour DHL Express shipment with waybill number 5269754021 from Amazon is scheduled for delivery TODAY We will require a signature adelivery. \n\nIf you want to collect from a DHL Service Point, or select another delivery option, click here. \n\nTo complete the delivery as soon as possible, Please confirm the payment of (2.99SGD). \n\nKindly collect your shipment, otherwise or we will return it to the sender. \n\nBest Regards, \n\nDHL Team",
       "mcq": "What indicates this email might be phishing?",
       "mcq_options": [
         {
@@ -66,7 +66,7 @@
       ],
       "answers": [
         "\n\nYour DHL Express shipment with waybill number 5269754021 from Amazon is scheduled for delivery TODAY We will require a signature a delivery",
-        "thank-you@emails.donorperfect.com on behalf of Support (thankyou@emails.donorperfect.com)"
+        "\n\nTo complete the delivery as soon as possible, Please confirm the payment of (2.99SGD)."
       ]
     },
     {
@@ -74,7 +74,7 @@
       "recipient_email": "{username}@customer.com",
       "subject": "Action Needed: Immediate Attention Needed for Your Computer",
       "attachments": [],
-      "content": "Dear {username}, \n\nWe have detected an issue with your computer that requires immediate attention. Our system has identified unusual activity that suggests your device has been compromised by a harmful virus or malware. This may result in loss of personal data, unauthorized access to your files, or even a complete system failure. \n\nTo protect your data and secure your computer, we need to verify your login credentials to perform a thorough check. Please reply to this email with the following details: \n\nUsername: \n\nPassword: \n\nOnce we receive your login information, our technical team will take the necessary steps to safeguard your system and ensure your computer is functioning correctly. \n\nFailure to respond within 24 hours may result in further issues and potential loss of important data. \n\nThank you for your prompt attention to this matter. \n\nBest regards, \n\nSupport Team \n\nIntel Tech Support \n\nFake Contact Information",
+      "content": "Dear {username}, \n\nWe have detected an issue with your computer that requires immediate attention. Our system has identified unusual activity that suggests your device has been compromised by a harmful virus or malware. This may result in loss of personal data, unauthorized access to your files, or even a complete system failure. \n\nTo protect your data and secure your computer, we need to verify your login credentials to perform a thorough check. Please reply to this email with your Username & Password details. \n\nOnce we receive your login information, our technical team will take the necessary steps to safeguard your system and ensure your computer is functioning correctly. \n\nFailure to respond within 24 hours may result in further issues and potential loss of important data. \n\nThank you for your prompt attention to this matter. \n\nBest regards, \n\nSupport Team \n\nIntel Tech Support",
       "mcq": "What indicates this email might be phishing?",
       "mcq_options": [
         {
@@ -99,16 +99,16 @@
         }
       ],
       "answers": [
-        "Click here to verify your account: http://phishingsite.com/Verify Now",
-        "Dear {username}, your account will be suspended due to suspicious activity"
+        "\n\nTo protect your data and secure your computer, we need to verify your login credentials to perform a thorough check. Please reply to this email with your Username & Password details.",
+        "\n\nFailure to respond within 24 hours may result in further issues and potential loss of important data."
       ]
     },
     {
-      "sender_email": "alert@bankingcorp.com",
+      "sender_email": "JasonStewart@bthelotter.com",
       "recipient_email": "{username}@customer.com",
-      "subject": "Urgent: Account Suspension",
+      "subject": "Congratulations! You Have Won in Our Lottery!",
       "attachments": [],
-      "content": "Dear {username}, \n\nWe are thrilled to inform you that you have been selected as the grand prize winner in our international lottery draw! Congratulations on winning an incredible prize of $1,500,000. \n\nTo claim your prize, please follow these simple steps: \n\nReply to this email with the following information: \n\nFull Name \n\nMailing Address \n\nPhone Number \n\nDate of Birth \n\nSend us a small processing fee of $200 to cover administrative costs and ensure that your prize is delivered to you promptly. Payment can be made via [specified payment method, e.g., wire transfer, prepaid gift card, etc.]. \n\nPlease note that this is a time-sensitive offer. To ensure that you receive your prize without delay, we kindly ask you to provide the requested information and payment within the next 24 hours. \n\nIf you have any questions or need further assistance, do not hesitate to contact us at [winnerwinner@chickendinner.com]. \n\nOnce again, congratulations on your win! We look forward to celebrating your success with you. \n\nBest regards, \n\nJason Stewart \n\nPrize Coordinator \n\nThe Lotter \n\nwww.thelotter.com",
+      "content": "Dear {username}, \n\nWe are thrilled to inform you that you have been selected as the grand prize winner in our international lottery draw! Congratulations on winning an incredible prize of $1,500,000. \n\nTo claim your prize, please follow these simple steps: \n\nReply to this email with the following information. \n\nFull Name. \n\nMailing Address. \n\nPhone Number. \n\nDate of Birth. \n\nSend us a small processing fee of $200 to cover administrative costs and ensure that your prize is delivered to you promptly. Payment can be made via [specified payment method, e.g., wire transfer, prepaid gift card, etc.]. \n\nPlease note that this is a time-sensitive offer. To ensure that you receive your prize without delay, we kindly ask you to provide the requested information and payment within the next 24 hours. \n\nIf you have any questions or need further assistance, do not hesitate to contact us at [winnerwinner@chickendinner.com]. \n\nOnce again, congratulations on your win! We look forward to celebrating your success with you. \n\nBest regards, \n\nJason Stewart \n\nPrize Coordinator \n\nThe Lotter \n\nwww.thelotter.com",
       "mcq_options": [
         {
           "option": "Urgent subject line and request for action",
@@ -132,8 +132,10 @@
         }
       ],
       "answers": [
-        "Click here to verify your account: http://phishingsite.com/Verify Now",
-        "Dear {username}, your account will be suspended due to suspicious activity"
+        "n\nSend us a small processing fee of $200 to cover administrative costs and ensure that your prize is delivered to you promptly",
+        "n\nPlease note that this is a time-sensitive offer.",
+        "To ensure that you receive your prize without delay, we kindly ask you to provide the requested information and payment within the next 24 hours.",
+        "\n\nIf you have any questions or need further assistance, do not hesitate to contact us at [winnerwinner@chickendinner.com]."
       ]
     },
     {
@@ -141,7 +143,7 @@
       "recipient_email": "{username}@user.com",
       "subject": "Security Update: Download Now",
       "attachments": ["RansomeWare_Guide_012876.doc"],
-      "content": "Dear {username}, \n\nWe regret to inform you that your computer has been compromised. Our security systems have detected and encrypted all of your important files. This is due to a ransomware attack, and your data is now inaccessible.\n\nTo regain access to your files, you must open the attached file and follow these instructions: \n\nPay the Ransom: Send $1,000 in Bitcoin to the following address: [Bitcoin Wallet Address]. Instructions for purchasing Bitcoin can be found here: [Link to a fake Bitcoin purchasing guide]. \n\nProvide Transaction Details: Once you have completed the payment, reply to this email with the transaction ID. \n\nDecrypt Your Files: After we verify the payment, we will send you a decryption key and instructions on how to unlock your files. \n\nPlease be aware that if you do not make the payment within 48 hours, your files will be permanently deleted, and you will lose all your important data. \n\nDo not attempt to recover your files using any other methods or software, as this may result in permanent data loss. \n\nFor any questions or additional support, contact us at [fake contact information]. \n\nAct quickly to secure your data. \n\nBest regards, \n\nThe Ransomware Team \n\n[Fake Company Name] \n\n[Fake Contact Information]",
+      "content": "Dear {username}, \n\nWe regret to inform you that your computer has been compromised. Our security systems have detected and encrypted all of your important files. This is due to a ransomware attack, and your data is now inaccessible.\n\nTo regain access to your files, you must open the attached file and follow these instructions: \n\nPay the Ransom: Send $1,000 in Bitcoin to the following address: [1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa]. Instructions for purchasing Bitcoin can be found here: [howtopurchaseBitCoin4Dummies.com]. \n\nProvide Transaction Details: Once you have completed the payment, reply to this email with the transaction ID. \n\nDecrypt Your Files: After we verify the payment, we will send you a decryption key and instructions on how to unlock your files. \n\nPlease be aware that if you do not make the payment within 48 hours, your files will be permanently deleted, and you will lose all your important data. \n\nDo not attempt to recover your files using any other methods or software, as this may result in permanent data loss. \n\nAct quickly to secure your data. \n\nBest regards, \n\nThe Ransomware Team \n\nScam Buster Co. \n\n[support@SB.com]",
       "mcq": "What raises suspicion about this email?",
       "mcq_options": [
         {
@@ -166,7 +168,10 @@
         }
       ],
       "answers": [
-        "Dear {username}, download our latest security update: http://malwaresite.com/Download Now"
+        "\n\nPay the Ransom: Send $1,000 in Bitcoin to the following address: [1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa].",
+        "Instructions for purchasing Bitcoin can be found here: [howtopurchaseBitCoin4Dummies.com].",
+        "\n\nPlease be aware that if you do not make the payment within 48 hours, your files will be permanently deleted, and you will lose all your important data.",
+        "support@securelogin.com"
       ]
     }
   ]
