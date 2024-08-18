@@ -9,7 +9,8 @@
 .bot-image {
   width: 5%;
   height: 5%;
-  margin-right: 10px;
+  margin-left: 530px; /* Move image & message */
+  margin-right: 50px; /* Space between icon & message */
 }
 
 /* Chat box for the welcome message */
