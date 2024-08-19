@@ -10,25 +10,22 @@
 /* Left box styling */
 .left-box {
   width: 35%;
-  padding: 30px;
-  border: 2px solid #ffffff; /* White border to stand out against the gradient */
-  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white for better visibility */
+  padding: 20px;
+  border: 1px solid #ffffff; /* White border to stand out against the gradient */
   text-align: left;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Enhanced shadow for more depth */
-  color: #000000; /* Black text color */
-  line-height: 2.2; /* Increase line height for more spacing between lines */
+  color: white; /* White text */
+  line-height: 1.5; /* Increase line height for more spacing between lines of paragraph */
   overflow: auto;
+  padding-bottom: 10px;
 }
 
-/* Additional spacing between list items */
-.left-box ul li {
-  margin-bottom: 25px; /* Add space between list items */
-}
-
-/* Additional spacing between paragraphs */
-.left-box p {
-  margin-bottom: 25px; /* Add space between paragraphs */
-}
+h2 {
+  font-size: 1.5em; /* Larger font size for the retro title */
+  color: #00ff00; /* Neon green color for the title */
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 0 #000; /* Shadow effect for better readability */
+  }
 
 /* Right box styling */
 .right-box {
