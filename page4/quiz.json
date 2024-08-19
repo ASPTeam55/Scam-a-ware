@@ -44,24 +44,24 @@
       "mcq": "WHAT TYPE OF EMAIL SCAM IS THIS?",
       "mcq_options": [
         {
-          "option": "Saying 'we urge you to treat it genuinely', makes it seem like not a phishing email",
+          "option": "JOB OFFER SCAM",
           "correct": false,
-          "tooltip": "This is a strong indicator of phishing, as urgent requests can create a false sense of urgency."
+          "tooltip": "This email is not a job offer scam. A job offer scam works by the scammer offering a fake job opportunity, often with high pay for minimal work. They may ask for personal information or a fee for processing the application."
         },
         {
-          "option": "info@adminofficeprocess.com looks like it came from google",
+          "option": "ROMANCE SCAM",
           "correct": false,
-          "tooltip": "This doesn't necessarily indicate phishing, as sender emails can be easily spoofed."
+          "tooltip": "This email is not a romance scam. Romance scammers create fake profiles on dating sites or social media and establish relationships with victims. After gaining their trust, they ask for money under various pretenses."
         },
         {
           "option": "CHARITY SCAM",
           "correct": true,
-          "tooltip": "Personalized greetings don't guarantee legitimacy, as phishers can use publicly available information."
+          "tooltip": "This type of scam email preys on people's compassion and desire to help in times of crisis. Always verify the legitimacy of a charity before making any donations. You can do this by checking with trusted sources like official charity watchdog organizations."
         },
         {
-          "option": "This email looks legitimate",
+          "option": "SPEAR PHISHING SCAM",
           "correct": false,
-          "tooltip": "Security-related subjects can be used by phishers to create a sense of urgency."
+          "tooltip": "This email is not a spear phishing scam. A spear phishing scam is a more targeted form of phishing, where the scammer personalizes the email with the recipient's name, job title, or other specific information to make it more convincing. These attacks often target specific individuals or organizations."
         }
       ],
       "answers": [
@@ -81,22 +81,22 @@
         {
           "option": "INVOICE SCAM",
           "correct": true,
-          "tooltip": "This is a strong indicator of phishing, as urgent requests can create a false sense of urgency."
+          "tooltip": "The scammer sends a fake invoice, often impersonating a vendor or service provider, and demands payment for services or products that were never provided."
         },
         {
-          "option": "Official-looking sender email",
+          "option": "INVESTMENT SCAM",
           "correct": false,
-          "tooltip": "This doesn't necessarily indicate phishing, as sender emails can be easily spoofed."
+          "tooltip": "This email is not a investment scam. In a investment scam, the scammer offers a fake investment opportunity that promises high returns with little or no risk."
         },
         {
-          "option": "Personalized greeting",
+          "option": "CLONE PHISHING SCAM",
           "correct": false,
-          "tooltip": "Personalized greetings don't guarantee legitimacy, as phishers can use publicly available information."
+          "tooltip": "This is not a clone phishing scam. In a clone phishing scam, the scammer sends an email that appears to be an exact copy of a legitimate one, but with malicious links or attachments."
         },
         {
-          "option": "Security-related subject",
+          "option": "JOB OFFER SCAM",
           "correct": false,
-          "tooltip": "Security-related subjects can be used by phishers to create a sense of urgency."
+          "tooltip": "This email is not a job offer scam. A job offer scam works by the scammer offering a fake job opportunity, often with high pay for minimal work. They may ask for personal information or a fee for processing the application."
         }
       ],
       "answers": [
@@ -120,7 +120,7 @@
         {
           "option": "TECH SUPPORT SCAM",
           "correct": true,
-          "tooltip": "This doesn't necessarily indicate phishing, as sender emails can be easily spoofed."
+          "tooltip": "This is a typical scam email that attempts to scare the user into providing sensitive information by creating a sense of urgency and fear. It's important to recognize such tactics and avoid sharing any personal or login details."
         },
         {
           "option": "Personalized greeting",
@@ -164,7 +164,7 @@
         {
           "option": "LOTTERY OR PRIZE SCAM",
           "correct": true,
-          "tooltip": "Security-related subjects can be used by phishers to create a sense of urgency."
+          "tooltip": "This type of email is designed to lure recipients into sending money or providing personal details under the guise of winning a large prize. Always be cautious of unsolicited prize notifications and avoid providing personal or financial information."
         }
       ],
       "answers": [
@@ -190,7 +190,7 @@
         {
           "option": "RANSOMWARE EMAIL",
           "correct": true,
-          "tooltip": "An official-looking sender email doesn't guarantee the download is safe."
+          "tooltip": "This email aims to create panic and urgency, pressuring the recipient to pay the ransom to regain access to their files. Never pay the ransom or download any files from suspicious emails. If you receive such an email, it’s best to contact a cybersecurity professional and report the incident to relevant authorities."
         },
         {
           "option": "Use of dear {username}",
