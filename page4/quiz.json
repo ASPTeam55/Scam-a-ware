@@ -6,7 +6,7 @@
       "subject": "Foundation Grant",
       "attachments": ["foundationGrant.doc"],
       "content": "Hello {username}, \n\nGoogle Foundation is using this Grant to reach out to the world (Less privilege) with your help and corporation. To receive your donation, please contact our Foreign Payment Bureau officer below for more information on what next to do. \n\nThe Attached document to this mail is in Microsoft Word Document format. Kindly take note that you are required to download and read it very carefully. Do follow the guided instructions. Kindly contact George Hanson (info@adminofficeprocess.com). \n\nNOTE: If you received this message in your Junk/Spam folder, that is because of the restrictions implemented by your Internet Service Provider, we urge you to treat it genuinely. \n\nYours in service,\n\nMs Marcus Oliver\nDirector of Accessibility\nPowered by Google",
-      "mcq": "WHAT TYPE OF EMAIL SCAM IS THIS?",
+      "mcq": "Is this a phishing email?",
       "mcq_options": [
         {
           "option": "Saying 'we urge you to treat it genuinely', makes it seem like not a phishing email",
@@ -30,9 +30,9 @@
         }
       ],
       "answers": [
-        "Kindly take note that you are required to download and read it very carefully",
+        "Kindly take note that you are required to download and read it very carefully. ",
         "Ms Marcus Oliver (at@minhvi.gob.ve)",
-        "NOTE: If you received this message in your Junk/Spam folder, that is because of the restrictions implemented by your Internet Service Provider, we urge you to treat it genuinely"
+        "\n\nNOTE: If you received this message in your Junk/Spam folder, that is because of the restrictions implemented by your Internet Service Provider, we urge you to treat it genuinely. "
       ]
     },
     {
@@ -65,9 +65,9 @@
         }
       ],
       "answers": [
-        "Your support is crucial in this time of need. Please donate now to help save lives and bring hope to those affected by this tragedy",
-        "Ms Sarah Tan (stan@globalLottery.gov)",
-        "NOTE: If you received this message in your Junk/Spam folder, that is because of the restrictions implemented by your Internet Service Provider, we urge you to treat it genuinely"
+        "\n\nYour support is crucial in this time of need. ",
+        "Please donate now to help save lives and bring hope to those affected by this tragedy. ",
+        "Ms Sarah Tan (stan@globalLottery.gov)"
       ]
     },
     {
@@ -75,8 +75,8 @@
       "recipient_email": "{username}@customer.com",
       "subject": "Immediate Action Required: Your Shipment Awaits Collection!",
       "attachments": [],
-      "content": "Hello {usernames}, \n\nYour DHL Express shipment with waybill number 5269754021 from Amazon is scheduled for delivery TODAY We will require a signature adelivery. \n\nIf you want to collect from a DHL Service Point, or select another delivery option, click here. \n\nTo complete the delivery as soon as possible, Please confirm the payment of (2.99SGD). \n\nKindly collect your shipment, otherwise or we will return it to the sender. \n\nBest Regards, \n\nDHL Team",
-      "mcq": "WHAT TYPE OF EMAIL SCAM IS THIS?",
+      "content": "Hello {username}, \n\nYour DHL Express shipment with waybill number 5269754021 from Amazon is scheduled for delivery TODAY We will require a signature a delivery. \n\nIf you want to collect from a DHL Service Point, or select another delivery option, click here. \n\nTo complete the delivery as soon as possible, Please confirm the payment of (2.99SGD). \n\nKindly collect your shipment, otherwise or we will return it to the sender. \n\nBest Regards, \n\nDHL Team",
+      "mcq": "What indicates this email might be phishing?",
       "mcq_options": [
         {
           "option": "INVOICE SCAM",
@@ -100,8 +100,8 @@
         }
       ],
       "answers": [
-        "Your DHL Express shipment with waybill number 5269754021 from Amazon is scheduled for delivery TODAY We will require a signature a delivery",
-        "To complete the delivery as soon as possible, Please confirm the payment of (2.99SGD)"
+        "Hello {username}, \n\nYour DHL Express shipment with waybill number 5269754021 from Amazon is scheduled for delivery TODAY We will require a signature a delivery. ",
+        "\n\nTo complete the delivery as soon as possible, Please confirm the payment of (2.99SGD). "
       ]
     },
     {
@@ -109,7 +109,7 @@
       "recipient_email": "{username}@customer.com",
       "subject": "Action Needed: Immediate Attention Needed for Your Computer",
       "attachments": [],
-      "content": "Dear {username}, \n\nWe have detected an issue with your computer that requires immediate attention. Our system has identified unusual activity that suggests your device has been compromised by a harmful virus or malware. This may result in loss of personal data, unauthorized access to your files, or even a complete system failure. \n\nTo protect your data and secure your computer, we need to verify your login credentials to perform a thorough check. Please reply to this email with your Username & Password details. \n\nOnce we receive your login information, our technical team will take the necessary steps to safeguard your system and ensure your computer is functioning correctly. \n\nFailure to respond within 24 hours may result in further issues and potential loss of important data. \n\nThank you for your prompt attention to this matter. \n\nBest regards, \n\nSupport Team \n\nIntel Tech Support",
+      "content": "Dear {username}, \n\nWe have detected an issue with your computer that requires immediate attention. Our system has identified unusual activity that suggests your device has been compromised by a harmful virus or malware. This may result in loss of personal data, unauthorized access to your files, or even a complete system failure. \n\nTo protect your data and secure your computer, we need to verify your login credentials to perform a thorough check. Please reply to this email with your Username and Password details. \n\nOnce we receive your login information, our technical team will take the necessary steps to safeguard your system and ensure your computer is functioning correctly. \n\nFailure to respond within 24 hours may result in further issues and potential loss of important data. \n\nThank you for your prompt attention to this matter. \n\nBest regards, \n\nSupport Team \n\nIntel Tech Support",
       "mcq": "WHAT TYPE OF EMAIL SCAM IS THIS?",
       "mcq_options": [
         {
@@ -134,8 +134,9 @@
         }
       ],
       "answers": [
-        "To protect your data and secure your computer, we need to verify your login credentials to perform a thorough check. Please reply to this email with your Username & Password details",
-        "Failure to respond within 24 hours may result in further issues and potential loss of important data"
+        "\n\nTo protect your data and secure your computer, we need to verify your login credentials to perform a thorough check. ",
+        "Please reply to this email with your Username and Password details. ",
+        "\n\nFailure to respond within 24 hours may result in further issues and potential loss of important data. "
       ]
     },
     {
@@ -168,10 +169,10 @@
         }
       ],
       "answers": [
-        "Send us a small processing fee of $200 to cover administrative costs and ensure that your prize is delivered to you promptly",
-        "Please note that this is a time-sensitive offer",
-        "To ensure that you receive your prize without delay, we kindly ask you to provide the requested information and payment within the next 24 hours",
-        "If you have any questions or need further assistance, do not hesitate to contact us at [winnerwinner@chickendinner.com]"
+        "\n\nSend us a small processing fee of $200 to cover administrative costs and ensure that your prize is delivered to you promptly. ",
+        "\n\nPlease note that this is a time-sensitive offer. ",
+        "To ensure that you receive your prize without delay, we kindly ask you to provide the requested information and payment within the next 24 hours. ",
+        "\n\nIf you have any questions or need further assistance, do not hesitate to contact us at [winnerwinner@chickendinner.com]. "
       ]
     },
     {
@@ -179,7 +180,7 @@
       "recipient_email": "{username}@user.com",
       "subject": "Security Update: Download Now",
       "attachments": ["RansomeWare_Guide_012876.doc"],
-      "content": "Dear {username}, \n\nWe regret to inform you that your computer has been compromised. Our security systems have detected and encrypted all of your important files. This is due to a ransomware attack, and your data is now inaccessible.\n\nTo regain access to your files, you must open the attached file and follow these instructions: \n\nPay the Ransom: Send $1,000 in Bitcoin to the following address: [1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa]. Instructions for purchasing Bitcoin can be found here: [howtopurchaseBitCoin4Dummies.com]. \n\nProvide Transaction Details: Once you have completed the payment, reply to this email with the transaction ID. \n\nDecrypt Your Files: After we verify the payment, we will send you a decryption key and instructions on how to unlock your files. \n\nPlease be aware that if you do not make the payment within 48 hours, your files will be permanently deleted, and you will lose all your important data. \n\nDo not attempt to recover your files using any other methods or software, as this may result in permanent data loss. \n\nAct quickly to secure your data. \n\nBest regards, \n\nThe Ransomware Team \n\nScam Buster Co. \n\n[support@SB.com]",
+      "content": "Dear {username}, \n\nWe regret to inform you that your computer has been compromised. Our security systems have detected and encrypted all of your important files. This is due to a ransomware attack, and your data is now inaccessible. \n\nTo regain access to your files, you must open the attached file and follow these instructions: \n\nPay the Ransom: Send $1,000 in Bitcoin to the following address: [1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa]. Instructions for purchasing Bitcoin can be found here: [howtopurchaseBitCoin4Dummies.com]. \n\nProvide Transaction Details: Once you have completed the payment, reply to this email with the transaction ID. \n\nDecrypt Your Files: After we verify the payment, we will send you a decryption key and instructions on how to unlock your files. \n\nPlease be aware that if you do not make the payment within 48 hours, your files will be permanently deleted, and you will lose all your important data. \n\nDo not attempt to recover your files using any other methods or software, as this may result in permanent data loss. \n\nAct quickly to secure your data. \n\nBest regards, \n\nThe Ransomware Team \n\nScam Buster Co. \n\n[support@SB.com]",
       "mcq": "WHAT TYPE OF EMAIL SCAM IS THIS?",
       "mcq_options": [
         {
@@ -204,10 +205,10 @@
         }
       ],
       "answers": [
-        "Pay the Ransom: Send $1,000 in Bitcoin to the following address: [1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa]",
-        "Instructions for purchasing Bitcoin can be found here: [howtopurchaseBitCoin4Dummies.com]",
-        "Please be aware that if you do not make the payment within 48 hours, your files will be permanently deleted, and you will lose all your important data",
-        "support@securelogin.com"
+        "\n\nTo regain access to your files, you must open the attached file and follow these instructions: \n\nPay the Ransom: Send $1,000 in Bitcoin to the following address: [1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa]. ",
+        "Instructions for purchasing Bitcoin can be found here: [howtopurchaseBitCoin4Dummies.com]. ",
+        "\n\nPlease be aware that if you do not make the payment within 48 hours, your files will be permanently deleted, and you will lose all your important data. ",
+        "support@securedata.com"
       ]
     }
   ]
