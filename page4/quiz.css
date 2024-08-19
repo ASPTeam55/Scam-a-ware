@@ -21,7 +21,7 @@
 }
 
 h2 {
-  font-size: 1.5em; /* Larger font size for the retro title */
+  font-size: 1.25em; /* Larger font size for the retro title */
   color: #00ff00; /* Neon green color for the title */
   margin-bottom: 20px;
   text-shadow: 2px 2px 0 #000; /* Shadow effect for better readability */

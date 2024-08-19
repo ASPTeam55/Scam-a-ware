@@ -152,9 +152,9 @@ function submit() {
     // Update MCQ text
     if (selectedOption === correctAnswer) {
       score++; 
-      document.getElementById('mcq').innerHTML = 'Correct!';
+      document.getElementById('mcq').innerHTML = 'RIGHT!';
     } else {
-      document.getElementById('mcq').innerHTML = 'Incorrect!';
+      document.getElementById('mcq').innerHTML = 'WRONG!';
     }
 
     const optionsContainer = document.getElementById('mcq-options');
