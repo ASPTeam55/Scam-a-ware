@@ -1,38 +1,40 @@
 {
   "question": [
     {
-      "sender_email": "Ms Marcus Oliver (at@minhvi.gob.ve)",
-      "recipient_email": "{username}@customer.com",
-      "subject": "Foundation Grant",
-      "attachments": ["foundationGrant.doc"],
-      "content": "Hello {username}, \n\nGoogle Foundation is using this Grant to reach out to the world (Less privilege) with your help and corporation. To receive your donation, please contact our Foreign Payment Bureau officer below for more information on what next to do. \n\nThe Attached document to this mail is in Microsoft Word Document format. Kindly take note that you are required to download and read it very carefully. Do follow the guided instructions. Kindly contact George Hanson (info@adminofficeprocess.com). \n\nNOTE: If you received this message in your Junk/Spam folder, that is because of the restrictions implemented by your Internet Service Provider, we urge you to treat it genuinely. \n\nYours in service,\n\nMs Marcus Oliver\nDirector of Accessibility\nPowered by Google",
-      "mcq": "Is this a phishing email?",
+      "sender_email": "Mr Orial Tut (oritu@scamaware.gov)",
+      "recipient_email": "player@customer.com",
+      "subject": "Tutorial Sample",
+      "attachments": ["notVirus folder"],
+      "content": "Hello Player, \n\nThis is a sample email scam for the tutorial. \n\nThere is an attached folder in this email and you are required to download and open it immediatley. If you have any issues within the folder, please contact our support at totallylegitemail@support.com. Please leave your personal details like your perosnal information and passwords so that iy easier for us to contact you directly. \n\nYou also need to transer $300 for us to continue this tutorial so that you can continue to learn this tutorial. Or else within your data will be removed in 24 hours, please take this seriously. \n\nRegards,\n\nMr Orial Tut \nDirector of Scamming \nPowered by Goggles",
+      "mcq": "WHAT TYPE OF EMAIL SCAM IS THIS?",
       "mcq_options": [
         {
-          "option": "Saying 'we urge you to treat it genuinely', makes it seem like not a phishing email",
+          "option": "SCAM TYPE A",
           "correct": false,
-          "tooltip": "This is a strong indicator of phishing, as urgent requests can create a false sense of urgency."
+          "tooltip": "This email is not SCAM TYPE A. This paragraph will explain what type of email scam you chose and how it generally works/looks."
         },
         {
-          "option": "info@adminofficeprocess.com looks like it came from google",
+          "option": "SCAM TYPE B",
           "correct": false,
-          "tooltip": "This doesn't necessarily indicate phishing, as sender emails can be easily spoofed."
+          "tooltip": "This email is not SCAM TYPE B. This paragraph will explain what type of email scam you chose and how it generally works/looks."
         },
         {
-          "option": "The sender email does not match the content of the email itself about Google Foundation",
+          "option": "SCAM TYPE C (ANS)",
           "correct": true,
-          "tooltip": "Personalized greetings don't guarantee legitimacy, as phishers can use publicly available information."
+          "tooltip": "This email is SCAM TYPE C. This paragraph will explain what type of email scam you chose and how it generally works/looks."
         },
         {
-          "option": "This email looks legitimate",
+          "option": "SCAM TYPE D",
           "correct": false,
-          "tooltip": "Security-related subjects can be used by phishers to create a sense of urgency."
+          "tooltip": "This email is not SCAM TYPE A. This paragraph will explain what type of email scam you chose and how it generally works/looks."
         }
       ],
       "answers": [
-        "Kindly take note that you are required to download and read it very carefully. ",
-        "Ms Marcus Oliver (at@minhvi.gob.ve)",
-        "\n\nNOTE: If you received this message in your Junk/Spam folder, that is because of the restrictions implemented by your Internet Service Provider, we urge you to treat it genuinely. "
+        "\n\nThere is an attached folder in this email and you are required to download and open it immediatley. ",
+        "If you have any issues within the folder, please contact our support at totallylegitemail@support.com. ",
+        "Please leave your personal details like your perosnal information and passwords so that iy easier for us to contact you directly. ",
+        "\n\nYou also need to transer $300 for us to continue this tutorial so that you can continue to learn this tutorial. ",
+        "Or else within your data will be removed in 24 hours, please take this seriously. "
       ]
     },
     {
