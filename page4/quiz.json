@@ -39,8 +39,8 @@
       "sender_email": "Ms Sarah Tan (stan@globalLottery.gov)",
       "recipient_email": "{username}@customer.com",
       "subject": "Help earthquake victims in Japan & donate",
-      "attachments": ["foundationGrant.doc"],
-      "content": "Dear {username}, \n\nAs you may have heard, a devastating earthquake has struck Japan, leaving thousands of families without shelter, food, and medical care. In this time of crisis, we urgently need your help to provide essential relief to those affected.\n\nOur charity, Global Relief Aid, is on the ground, delivering life-saving supplies and support to the victims. But we can't do it alone. We need generous individuals like you to help us continue our critical work.\n\nAny amount you can give will make a difference. To contribute, please click on the secure link: savethejaps.com \n\nSpread the word by forwarding this email to your friends, family, and colleagues. Together, we can make a significant impact. \n\nYou can see the amount you can donate in the attached document and some of the prices below. \n\n$50 provides a family with emergency food supplies for a week. \n\n$100 helps build temporary shelters for those who have lost their homes. \n\n$250 provides critical medical care to those in need. \n\nYour support is crucial in this time of need. Please donate now to help save lives and bring hope to those affected by this tragedy. \n\nThank you for your kindness and generosity. \n\nSincerely, \n\nSarah Tan \n\nDirector of Fundraising \n\nGlobal Relief Aid",
+      "attachments": ["reliefDisastur.doc"],
+      "content": "Dear {username}, \n\nAs you may have heard, a devastating earthquake has struck Japan, leaving thousands of families without shelter, food, and medical care. In this time of crisis, we urgently need your help to provide essential relief to those affected.\n\nOur charity, Global Relief Aid, is on the ground, delivering life-saving supplies and support to the victims. But we can't do it alone. We need generous individuals like you to help us continue our critical work. \n\nAny amount you can give will make a difference. To contribute, please click on the secure link: savethejaps.com. \n\nSpread the word by forwarding this email to your friends, family, and colleagues. Together, we can make a significant impact. \n\nYou can see the amount you can donate in the attached document by downloading it and see some of the prices below. \n\n$50 provides a family with emergency food supplies for a week. \n\n$100 helps build temporary shelters for those who have lost their homes. \n\n$250 provides critical medical care to those in need. \n\nYour support is crucial in this time of need. Please donate now to help save lives and bring hope to those affected by this tragedy. \n\nThank you for your kindness and generosity. \n\nSincerely, \n\nSarah Tan \nDirector of Fundraising \nGlobal Relief Aid",
       "mcq": "WHAT TYPE OF EMAIL SCAM IS THIS?",
       "mcq_options": [
         {
@@ -65,8 +65,8 @@
         }
       ],
       "answers": [
-        "\n\nYour support is crucial in this time of need. ",
-        "Please donate now to help save lives and bring hope to those affected by this tragedy. ",
+        "\n\nYou can see the amount you can donate in the attached document by downloading it and see some of the prices below. ",
+        "To contribute, please click on the secure link: savethejaps.com. ",
         "Ms Sarah Tan (stan@globalLottery.gov)"
       ]
     },
@@ -75,13 +75,13 @@
       "recipient_email": "{username}@customer.com",
       "subject": "Immediate Action Required: Your Shipment Awaits Collection!",
       "attachments": [],
-      "content": "Hello {username}, \n\nYour DHL Express shipment with waybill number 5269754021 from Amazon is scheduled for delivery TODAY We will require a signature a delivery. \n\nIf you want to collect from a DHL Service Point, or select another delivery option, click here. \n\nTo complete the delivery as soon as possible, Please confirm the payment of (2.99SGD). \n\nKindly collect your shipment, otherwise or we will return it to the sender. \n\nBest Regards, \n\nDHL Team",
+      "content": "Hello {username}, \n\nYour DHL Express shipment with waybill number 5269754021 from Amazon is scheduled for delivery TODAY We will require a signature a delivery. \n\nIf you want to collect from a DHL Service Point, or select another delivery option, click here at our website susDHL.com.uk. \n\nTo complete the delivery as soon as possible, Please confirm the payment of (2.99SGD). \n\nKindly collect your shipment, otherwise or we will return it to the sender. \n\nBest Regards, \n\nDHL Team",
       "mcq": "What indicates this email might be phishing?",
       "mcq_options": [
         {
           "option": "INVOICE SCAM",
           "correct": true,
-          "tooltip": "The scammer sends a fake invoice, often impersonating a vendor or service provider, and demands payment for services or products that were never provided."
+          "tooltip": "This type of scam email is designed to trick recipients into paying a fraudulent invoice, often by creating a sense of urgency or by impersonating a legitimate company or service provider. Always verify the authenticity of any invoice you receive, especially if it is unexpected or from an unfamiliar source."
         },
         {
           "option": "INVESTMENT SCAM",
@@ -100,8 +100,9 @@
         }
       ],
       "answers": [
-        "Hello {username}, \n\nYour DHL Express shipment with waybill number 5269754021 from Amazon is scheduled for delivery TODAY We will require a signature a delivery. ",
-        "\n\nTo complete the delivery as soon as possible, Please confirm the payment of (2.99SGD). "
+        "thank-you@emails.donorperfect.com on behalf of Support (thankyou@emails.donorperfect.com)",
+        "\n\nTo complete the delivery as soon as possible, Please confirm the payment of (2.99SGD). ",
+        "\n\nIf you want to collect from a DHL Service Point, or select another delivery option, click here at our website susDHL.com.uk. "
       ]
     },
     {
@@ -109,13 +110,13 @@
       "recipient_email": "{username}@customer.com",
       "subject": "Action Needed: Immediate Attention Needed for Your Computer",
       "attachments": [],
-      "content": "Dear {username}, \n\nWe have detected an issue with your computer that requires immediate attention. Our system has identified unusual activity that suggests your device has been compromised by a harmful virus or malware. This may result in loss of personal data, unauthorized access to your files, or even a complete system failure. \n\nTo protect your data and secure your computer, we need to verify your login credentials to perform a thorough check. Please reply to this email with your Username and Password details. \n\nOnce we receive your login information, our technical team will take the necessary steps to safeguard your system and ensure your computer is functioning correctly. \n\nFailure to respond within 24 hours may result in further issues and potential loss of important data. \n\nThank you for your prompt attention to this matter. \n\nBest regards, \n\nSupport Team \n\nIntel Tech Support",
+      "content": "Dear {username}, \n\nWe have detected an issue with your computer that requires immediate attention. Our system has identified unusual activity that suggests your device has been compromised by a harmful virus or malware. This may result in loss of personal data, unauthorized access to your files, or even a complete system failure. \n\nTo protect your data and secure your computer, we need to verify your login credentials to perform a thorough check. Please reply to this email with your Username and Password details. \n\nOnce we receive your login information, our technical team will take the necessary steps to safeguard your system and ensure your computer is functioning correctly. \n\nFailure to respond within 24 hours may result in further issues and potential loss of important data. \n\nThank you for your prompt attention to this matter. \n\nBest regards, \n\nSupport Team \nIntel Tech Support",
       "mcq": "WHAT TYPE OF EMAIL SCAM IS THIS?",
       "mcq_options": [
         {
-          "option": "Urgent subject line and request for action",
+          "option": "RANSOMWARE SCAM",
           "correct": false,
-          "tooltip": "This is a strong indicator of phishing, as urgent requests can create a false sense of urgency."
+          "tooltip": "This email is not a ransomware scam. Ransomware scam are usually emails that contain malicious attachments or links that, when opened, install ransomware on the recipient's computer, encrypting their files and demanding a ransom for the decryption key."
         },
         {
           "option": "TECH SUPPORT SCAM",
@@ -123,14 +124,14 @@
           "tooltip": "This is a typical scam email that attempts to scare the user into providing sensitive information by creating a sense of urgency and fear. It's important to recognize such tactics and avoid sharing any personal or login details."
         },
         {
-          "option": "Personalized greeting",
+          "option": "CHARITY SCAM",
           "correct": false,
-          "tooltip": "Personalized greetings don't guarantee legitimacy, as phishers can use publicly available information."
+          "tooltip": "This email is not a charity scam. Charity scams usually try to impersonate charities, often following natural disasters or tragedies, and request donations that go directly to the scammer."
         },
         {
-          "option": "Security-related subject",
+          "option": "SOCIAL MEDIA SCAM",
           "correct": false,
-          "tooltip": "Security-related subjects can be used by phishers to create a sense of urgency."
+          "tooltip": "This email is not a social media scam. Those emails usually claim that someone you know has sent you a friend request or message on social media, and provides a link to a phishing site that looks like the login page for that social media platform."
         }
       ],
       "answers": [
@@ -144,23 +145,23 @@
       "recipient_email": "{username}@customer.com",
       "subject": "Congratulations! You Have Won in Our Lottery!",
       "attachments": [],
-      "content": "Dear {username}, \n\nWe are thrilled to inform you that you have been selected as the grand prize winner in our international lottery draw! Congratulations on winning an incredible prize of $1,500,000. \n\nTo claim your prize, please follow these simple steps: \n\nReply to this email with the following information. \n\nFull Name. \n\nMailing Address. \n\nPhone Number. \n\nDate of Birth. \n\nSend us a small processing fee of $200 to cover administrative costs and ensure that your prize is delivered to you promptly. Payment can be made via [specified payment method, e.g., wire transfer, prepaid gift card, etc.]. \n\nPlease note that this is a time-sensitive offer. To ensure that you receive your prize without delay, we kindly ask you to provide the requested information and payment within the next 24 hours. \n\nIf you have any questions or need further assistance, do not hesitate to contact us at [winnerwinner@chickendinner.com]. \n\nOnce again, congratulations on your win! We look forward to celebrating your success with you. \n\nBest regards, \n\nJason Stewart \n\nPrize Coordinator \n\nThe Lotter \n\nwww.thelotter.com",
+      "content": "Dear {username}, \n\nWe are thrilled to inform you that you have been selected as the grand prize winner in our international lottery draw! Congratulations on winning an incredible prize of $1,500,000. \n\nTo claim your prize, please follow these simple steps: \n\nReply to this email with the following information. \n\nFull Name. \n\nMailing Address. \n\nPhone Number. \n\nDate of Birth. \n\nSend us a small processing fee of $200 to cover administrative costs and ensure that your prize is delivered to you promptly. Payment can be made via [specified payment method, e.g., wire transfer, prepaid gift card, etc.]. \n\nPlease note that this is a time-sensitive offer. To ensure that you receive your prize without delay, we kindly ask you to provide the requested information and payment within the next 24 hours. \n\nIf you have any questions or need further assistance, do not hesitate to contact us at [winnerwinner@chickendinner.com]. \n\nOnce again, congratulations on your win! We look forward to celebrating your success with you. \n\nBest regards, \n\nJason Stewart \nPrize Coordinator \nThe Lotter \nwww.thelotter.com",
       "mcq": "WHAT TYPE OF EMAIL SCAM IS THIS?",
       "mcq_options": [
         {
-          "option": "Urgent subject line and request for action",
+          "option": "BUSINESS EMAIL COMPROMISE (BEC) SCAM",
           "correct": false,
-          "tooltip": "This is a strong indicator of phishing, as urgent requests can create a false sense of urgency."
+          "tooltip": "This is not a BEC scam. In those scams, the attacker impersonates a company's CEO, CFO, or another high-level executive, and instructs an employee to transfer funds, often to a fraudulent account."
         },
         {
-          "option": "Official-looking sender email",
+          "option": "INVOICE SCAM",
           "correct": false,
-          "tooltip": "This doesn't necessarily indicate phishing, as sender emails can be easily spoofed."
+          "tooltip": "This is not a invoice scam. In those scams, the scammer sends a fake invoice, often impersonating a vendor or service provider, and demands payment for services or products that were never provided."
         },
         {
-          "option": "Personalized greeting",
+          "option": "TECH SUPPORT SCAM",
           "correct": false,
-          "tooltip": "Personalized greetings don't guarantee legitimacy, as phishers can use publicly available information."
+          "tooltip": "This email is not a tech support scam. Those emails claim that the recipient's computer is infected with a virus or has some other problem. The email often urges the recipient to call a tech support number or download a tool to fix the issue, which in reality either steals information or installs malware."
         },
         {
           "option": "LOTTERY OR PRIZE SCAM",
@@ -180,35 +181,34 @@
       "recipient_email": "{username}@user.com",
       "subject": "Security Update: Download Now",
       "attachments": ["RansomeWare_Guide_012876.doc"],
-      "content": "Dear {username}, \n\nWe regret to inform you that your computer has been compromised. Our security systems have detected and encrypted all of your important files. This is due to a ransomware attack, and your data is now inaccessible. \n\nTo regain access to your files, you must open the attached file and follow these instructions: \n\nPay the Ransom: Send $1,000 in Bitcoin to the following address: [1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa]. Instructions for purchasing Bitcoin can be found here: [howtopurchaseBitCoin4Dummies.com]. \n\nProvide Transaction Details: Once you have completed the payment, reply to this email with the transaction ID. \n\nDecrypt Your Files: After we verify the payment, we will send you a decryption key and instructions on how to unlock your files. \n\nPlease be aware that if you do not make the payment within 48 hours, your files will be permanently deleted, and you will lose all your important data. \n\nDo not attempt to recover your files using any other methods or software, as this may result in permanent data loss. \n\nAct quickly to secure your data. \n\nBest regards, \n\nThe Ransomware Team \n\nScam Buster Co. \n\n[support@SB.com]",
+      "content": "Dear {username}, \n\nWe regret to inform you that your computer has been compromised. Our security systems have detected and encrypted all of your important files. This is due to a ransomware attack, and your data is now inaccessible. \n\nTo regain access to your files, you must immediately open the attached file and follow these instructions. \n\nPay the Ransom: Send $1,000 in Bitcoin to the following address: [1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa]. Instructions for purchasing Bitcoin can be found here: [howtopurchaseBitCoin4Dummies.com]. \n\nProvide Transaction Details: Once you have completed the payment, reply to this email with the transaction ID. \n\nDecrypt Your Files: After we verify the payment, we will send you a decryption key and instructions on how to unlock your files. \n\nPlease be aware that if you do not make the payment within 48 hours, your files will be permanently deleted, and you will lose all your important data. \n\nDo not attempt to recover your files using any other methods or software, as this may result in permanent data loss. \n\nAct quickly to secure your data. \n\nBest regards, \n\nThe Ransomware Team \nScam Buster Co. \nsupport@SB.com",
       "mcq": "WHAT TYPE OF EMAIL SCAM IS THIS?",
       "mcq_options": [
         {
-          "option": "Request to download software from unknown source",
+          "option": "SOCIAL MEDIA SCAM",
           "correct": false,
-          "tooltip": "Downloading software from unknown sources can lead to malware infections."
+          "tooltip": "This email is not a social media scam. Those emails usually claim that someone you know has sent you a friend request or message on social media, and provides a link to a phishing site that looks like the login page for that social media platform."
         },
         {
-          "option": "RANSOMWARE EMAIL",
+          "option": "RANSOMWARE SCAM",
           "correct": true,
           "tooltip": "This email aims to create panic and urgency, pressuring the recipient to pay the ransom to regain access to their files. Never pay the ransom or download any files from suspicious emails. If you receive such an email, it’s best to contact a cybersecurity professional and report the incident to relevant authorities."
         },
         {
-          "option": "Use of dear {username}",
+          "option": "SPEAR PHISHING SCAM",
           "correct": false,
-          "tooltip": "Personalized greetings don't ensure the email is legitimate."
+          "tooltip": "This email is not a spear phishing scam. A spear phishing scam is a more targeted form of phishing, where the scammer personalizes the email with the recipient's name, job title, or other specific information to make it more convincing. These attacks often target specific individuals or organizations."
         },
         {
-          "option": "Security-related subject",
+          "option": "CLONE PHISHING SCAM",
           "correct": false,
-          "tooltip": "Security-related subjects can be used to disguise malicious downloads."
+          "tooltip": "This is not a clone phishing scam. In a clone phishing scam, the scammer sends an email that appears to be an exact copy of a legitimate one, but with malicious links or attachments."
         }
       ],
       "answers": [
-        "\n\nTo regain access to your files, you must open the attached file and follow these instructions: \n\nPay the Ransom: Send $1,000 in Bitcoin to the following address: [1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa]. ",
-        "Instructions for purchasing Bitcoin can be found here: [howtopurchaseBitCoin4Dummies.com]. ",
-        "\n\nPlease be aware that if you do not make the payment within 48 hours, your files will be permanently deleted, and you will lose all your important data. ",
-        "support@securedata.com"
+        "\n\nTo regain access to your files, you must immediately open the attached file and follow these instructions. ",
+        "\n\nPay the Ransom: Send $1,000 in Bitcoin to the following address: [1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa]. ",
+        "Instructions for purchasing Bitcoin can be found here: [howtopurchaseBitCoin4Dummies.com]. "
       ]
     }
   ]

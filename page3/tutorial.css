@@ -9,7 +9,7 @@
 .bot-image {
   width: 5%;
   height: 5%;
-  margin-left: 530px; /* Move image & message */
+  margin-left: 29%; /* Move image & message */
   margin-right: 50px; /* Space between icon & message */
 }
 
@@ -19,8 +19,8 @@
   border: 2px solid #00ff00; /* Green border */
   border-radius: 10px;
   padding: 10px;
-  max-width: 20%;
-  width: 20%; /* Make the chat box responsive */
+  max-width: 30%;
+  width: 30%; /* Make the chat box responsive */
 }
 
 /* Welcome message */
@@ -28,7 +28,7 @@
   font-family: 'Press Start 2P', cursive; /* Retro pixelated font */
   font-size: 1em; /* Adjust font size for the welcome message */
   color: #A9A9A9; 
-  text-align: left;
+  text-align: center;
 }
 
 /* Responsive adjustments for smaller screens */
