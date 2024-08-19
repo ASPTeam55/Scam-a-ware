@@ -86,7 +86,7 @@ function load_mcq(){
       document.getElementById('mcq-options').appendChild(optionElement);
   });
 
-  document.getElementById('submit-button').innerHTML = 'Submit';
+  document.getElementById('submit-button').innerHTML = 'SUBMIT';
   document.getElementById('submit-button').addEventListener('click', submitListener);
 } 
 
@@ -105,7 +105,7 @@ function highlight(){
   recipient_email.onclick = () => toggleHighlight(recipient_email, answerCount);
   subject.onclick = () => toggleHighlight(subject, answerCount);
 
-  document.getElementById('mcq').innerHTML = 'Select all the suspicious aspects in the email';
+  document.getElementById('mcq').innerHTML = 'SELECT ALL SUSPICIOUS PARTS IN THE EMAIL';
 
   const optionsContainer = document.getElementById('mcq-options');
   while (optionsContainer.firstChild) {
@@ -113,7 +113,7 @@ function highlight(){
   }
 
   // Display highlight counter
-  optionsContainer.innerHTML = `Answer select: 0/${answerCount}`;
+  optionsContainer.innerHTML = `Selected answers: 0/${answerCount}`;
 
   const contentElement = document.getElementById('content');
   const sentences = question.content.split('. ');
@@ -133,7 +133,7 @@ function highlight(){
     contentElement.appendChild(sentenceElement);
   });
 
-  document.getElementById('submit-button').innerHTML = 'submit';
+  document.getElementById('submit-button').innerHTML = 'SUBMIT';
   document.getElementById('submit-button').style.display = 'none';
   document.getElementById('submit-button').removeEventListener('click', highlightListener);
   document.getElementById('submit-button').addEventListener('click', submitListener);
@@ -167,7 +167,7 @@ function submit() {
     selectedOptionElement.innerHTML = `${selectedTooltip}`;
     optionsContainer.appendChild(selectedOptionElement);
 
-    document.getElementById('submit-button').innerHTML = 'Next';
+    document.getElementById('submit-button').innerHTML = 'NEXT';
     document.getElementById('submit-button').removeEventListener('click', submitListener);
     document.getElementById('submit-button').addEventListener('click', highlightListener);
   } 
@@ -198,7 +198,7 @@ function submit() {
       const answerSelected = (answerIndexInHighlight == -1)? false:true;
       console.log(answer);
       if(answerSelected){
-        console.log("correct", answer);
+        console.log("CORRECT!", answer);
         const sentence = highlightSentences[answerIndexInHighlight];
         sentence.classList.remove('highlighted');
         sentence.classList.add('highlighted-correct');
@@ -233,9 +233,9 @@ function submit() {
 
     if(allCorrect){
       score++;
-      document.getElementById('mcq').innerHTML = '<em>Correct</em>';
+      document.getElementById('mcq').innerHTML = '<em>CORRECT!</em>';
     } else {
-      document.getElementById('mcq').innerHTML = '<em>Wrong</em>. Here are the correct answers: ';
+      document.getElementById('mcq').innerHTML = '<em>WRONG!</em>. Here are the correct answers: ';
 
       question.answers.forEach((answer, index) => {
         answer = answer.replaceAll('{username}', sessionStorage.getItem('username'));
@@ -245,7 +245,7 @@ function submit() {
       });
     }
 
-    document.getElementById('submit-button').innerHTML = 'next';
+    document.getElementById('submit-button').innerHTML = 'NEXT';
     document.getElementById('submit-button').removeEventListener('click', submitListener);
     document.getElementById('submit-button').addEventListener('click', mcqListener);
 
@@ -260,7 +260,7 @@ function loadNextQuestion() {
     question_index++; // Increment question index
     load_email();
     load_mcq();
-    document.getElementById('submit-button').innerHTML = 'Submit';
+    document.getElementById('submit-button').innerHTML = 'SUBMIT';
     document.getElementById('submit-button').removeEventListener('click', mcqListener);
     document.getElementById('submit-button').addEventListener('click', submitListener);
   } else {
