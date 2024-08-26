@@ -1,43 +1,6 @@
 {
   "question": [
     {
-      "sender_email": "Mr Orial Tut (oritu@scamaware.com)",
-      "recipient_email": "player@customer.com",
-      "subject": "Tutorial Sample",
-      "attachments": ["notVirus.zip"],
-      "content": "Hello Player, \n\nThis is a sample email scam for the tutorial. \n\nThere is an attached folder in this email and you are required to download and open it immediatley. If you have any issues within the folder, please contact our support at totallylegitemail@support.com. Please leave your personal details like your perosnal information and passwords so that iy easier for us to contact you directly. \n\nYou also need to transer $300 for us to continue this tutorial so that you can continue to learn this tutorial. Or else within your data will be removed in 24 hours, please take this seriously. \n\nRegards,\n\nMr Orial Tut \nDirector of Scamming \nPowered by Goggles",
-      "mcq": "WHAT TYPE OF EMAIL SCAM IS THIS?",
-      "mcq_options": [
-        {
-          "option": "SCAM TYPE A",
-          "correct": false,
-          "tooltip": "This email is not SCAM TYPE A. This paragraph will explain what type of email scam you chose and how it generally works/looks."
-        },
-        {
-          "option": "SCAM TYPE B",
-          "correct": false,
-          "tooltip": "This email is not SCAM TYPE B. This paragraph will explain what type of email scam you chose and how it generally works/looks."
-        },
-        {
-          "option": "SCAM TYPE C (ANS)",
-          "correct": true,
-          "tooltip": "This email is SCAM TYPE C. This paragraph will explain what type of email scam you chose and how it generally works/looks."
-        },
-        {
-          "option": "SCAM TYPE D",
-          "correct": false,
-          "tooltip": "This email is not SCAM TYPE A. This paragraph will explain what type of email scam you chose and how it generally works/looks."
-        }
-      ],
-      "answers": [
-        "\n\nThere is an attached folder in this email and you are required to download and open it immediatley. ",
-        "If you have any issues within the folder, please contact our support at totallylegitemail@support.com. ",
-        "Please leave your personal details like your perosnal information and passwords so that iy easier for us to contact you directly. ",
-        "\n\nYou also need to transer $300 for us to continue this tutorial so that you can continue to learn this tutorial. ",
-        "Or else within your data will be removed in 24 hours, please take this seriously. "
-      ]
-    },
-    {
       "sender_email": "Ms Sarah Tan (stan@globalLottery.gov)",
       "recipient_email": "{username}@customer.com",
       "subject": "Help earthquake victims in Japan & donate",
