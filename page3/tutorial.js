@@ -6,9 +6,18 @@ audio.preload = 'auto';
 
 //image stuff
 let currentIndex = 0;
+// const images = [
+//   {img: '../assets/tp.png'},//images
+//   {img: '../assets/tp1.png'}
+// ];
 const images = [
-  {img: '../assets/tp.png'},//images
-  {img: '../assets/tp1.png'}
+  {img: '../assets/tutorial_01.png'},//images
+  {img: '../assets/tutorial_02.png'},
+  {img: '../assets/tutorial_03.png'},
+  {img: '../assets/tutorial_04.png'},
+  {img: '../assets/tutorial_05.png'},
+  {img: '../assets/tutorial_06.png'},
+  {img: '../assets/tutorial_07.png'},
 ];
 const imageContainer = document.querySelector('.image-container');
 const leftButton = document.getElementById('leftButton');
