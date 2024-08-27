@@ -45,13 +45,13 @@ h2 {
   top: 1%;
   right: 1%;
   display: flex;
-  gap: 5px; /* Space between buttons */
+  gap: 1px; /* Space between buttons */
 }
 
 /* Style for individual window control buttons */
 .right-box .control-button {
-  width: 1%; /* Width of the buttons */
-  height: 1%; /* Height of the buttons */
+  width: 5px; /* Width of the buttons */
+  height: 40px; /* Height of the buttons */
   border-radius: 50%; /* Circular buttons */
   border: 1px solid #000000; /* Border for buttons */
   background-color: #ffffff; /* White background for visibility */
