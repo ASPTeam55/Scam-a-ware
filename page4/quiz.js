@@ -191,19 +191,15 @@ function submit() {
 
     correctAnswers.forEach(answer => {
       // adjust the correct answer for dynamic username & email
-      console.log(highlightSentencesText);
       answer = answer.replaceAll('{username}', sessionStorage.getItem('username'));
 
       const answerIndexInHighlight = highlightSentencesText.findIndex(text => text === answer);
       const answerSelected = (answerIndexInHighlight == -1)? false:true;
-      console.log(answer);
       if(answerSelected){
-        console.log("CORRECT!", answer);
         const sentence = highlightSentences[answerIndexInHighlight];
         sentence.classList.remove('highlighted');
         sentence.classList.add('highlighted-correct');
       } else {
-        console.log("false", answer);
         const answerSentenceIndex = sentencesText.findIndex(text => text === answer);
         const answerSentence = sentences[answerSentenceIndex];
         answerSentence.classList.add('highlighted-miss');
