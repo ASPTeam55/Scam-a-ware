@@ -231,7 +231,7 @@ function submit() {
       score++;
       document.getElementById('mcq').innerHTML = '<em>CORRECT!</em>';
     } else {
-      document.getElementById('mcq').innerHTML = '<em>WRONG!</em>. Here are the correct answers: ';
+      document.getElementById('mcq').innerHTML = '<em>WRONG!</em> Here are the correct answers: ';
 
       question.answers.forEach((answer, index) => {
         answer = answer.replaceAll('{username}', sessionStorage.getItem('username'));
@@ -281,7 +281,7 @@ function toggleHighlight(sentenceElement, answerCount) {
 
     // Display highlight counter
     const optionsContainer = document.getElementById('mcq-options');
-    optionsContainer.innerHTML = `Answer select: ${highlightCount}/${answerCount}`;
+    optionsContainer.innerHTML = `Selected answers: ${highlightCount}/${answerCount}`;
   }
 }
 

@@ -21,6 +21,7 @@
   padding: 10px;
   max-width: 30%;
   width: 30%; /* Make the chat box responsive */
+  line-height: 1.5;
 }
 
 /* Welcome message */
